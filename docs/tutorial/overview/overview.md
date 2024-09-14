@@ -1,8 +1,20 @@
 ---
 sidebar_position: 1
+title: Overview
 ---
 
-# Tutorial Intro
+<div style="text-align: center;">
+  <img src="/img/logo/slogan.min.svg" style="width: 280px; margin: 1rem 0;"/>
+</div>
+
+# Overview
+
+***foyer***, just as its slogan, is a hybrid cache library for the Rust programming language. It provides a unified abstraction to utilize and manage cache on both memory and disk. 
+
+***TBC ... ...***
+
+***foyer*** draws inspiration from [Facebook/CacheLib](https://github.com/facebook/cachelib), a highly-regarded hybrid cache library in C++, and [ben-manes/caffeine](https://github.com/ben-manes/caffeine), a popular caching library in Java, among other projects.
+
 
 Let's discover **Docusaurus in less than 5 minutes**.
 
