@@ -35,6 +35,8 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
+          sidebarCollapsed: false,
+          sidebarCollapsible: false,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
@@ -74,9 +76,9 @@ const config: Config = {
       items: [
         {
           type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          sidebarId: 'learnSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Learn',
         },
         { to: '/blog', label: 'Blog', position: 'left' },
         { to: '/blog/remote/CHANGELOG', label: 'Changelog', position: 'left' },
@@ -162,7 +164,7 @@ const config: Config = {
               outDir: "blog/remote",
               documents: ["CHANGELOG.md"],
           },
-    ]
+    ],
   ]
 };
 
