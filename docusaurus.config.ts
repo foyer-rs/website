@@ -1,5 +1,5 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
+import { themes as prismThemes } from 'prism-react-renderer';
+import type { Config, MarkdownConfig } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
@@ -78,7 +78,8 @@ const config: Config = {
           position: 'left',
           label: 'Tutorial',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
+        { to: '/blog', label: 'Blog', position: 'left' },
+        { to: '/blog/remote/CHANGELOG', label: 'Changelog', position: 'left' },
         {
           href: 'https://crates.io/crates/foyer',
           label: 'crates.io',
@@ -86,7 +87,7 @@ const config: Config = {
         },
         {
           href: 'https://docs.rs/foyer',
-          label: 'docs.rs',
+          label: 'Docs.rs',
           position: 'right',
         },
         {
@@ -126,18 +127,43 @@ const config: Config = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/foyer/foyer-rs',
+              href: 'https://github.com/foyer-rs/foyer',
+            },
+            {
+              label: 'Docs.rs',
+              href: 'https://docs.rs/foyer',
+            },
+            {
+              label: 'crates.io',
+              href: 'https://crates.io/crates/foyer',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} foyer-rs. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} foyer. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.dracula,
       darkTheme: prismThemes.dracula,
     },
   } satisfies Preset.ThemeConfig,
+
+  markdown: {
+    format: 'detect',
+  },
+  
+  plugins: [
+    [
+      // https://github.com/rdilweb/docusaurus-plugin-remote-content
+      "docusaurus-plugin-remote-content",
+          {
+              name: "remote",
+              sourceBaseUrl: "https://raw.githubusercontent.com/foyer-rs/foyer/main/",
+              outDir: "blog/remote",
+              documents: ["CHANGELOG.md"],
+          },
+    ]
+  ]
 };
 
 export default config;
