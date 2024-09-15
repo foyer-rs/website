@@ -1,0 +1,1392 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="rss.xsl"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>foyer Blog</title>
+        <link>https://foyer.rs/blog</link>
+        <description>foyer Blog</description>
+        <lastBuildDate>Fri, 12 May 2023 03:02:09 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>en</language>
+        <item>
+            <title><![CDATA[Changelog]]></title>
+            <link>https://foyer.rs/blog/remote/CHANGELOG</link>
+            <guid>https://foyer.rs/blog/remote/CHANGELOG</guid>
+            <pubDate>Fri, 12 May 2023 03:02:09 GMT</pubDate>
+            <description><![CDATA[Changelog for foyer.]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-09-12">2024-09-12<a href="https://foyer.rs/blog/remote/CHANGELOG#2024-09-12" class="hash-link" aria-label="Direct link to 2024-09-12" title="Direct link to 2024-09-12">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases">Releases<a href="https://foyer.rs/blog/remote/CHANGELOG#releases" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer</td><td>0.11.2</td></tr><tr><td>foyer-common</td><td>0.9.2</td></tr><tr><td>foyer-intrusive</td><td>0.9.2</td></tr><tr><td>foyer-memory</td><td>0.7.2</td></tr><tr><td>foyer-storage</td><td>0.10.2</td></tr><tr><td>foyer-bench</td><td>0.3.2</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes">Changes<a href="https://foyer.rs/blog/remote/CHANGELOG#changes" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Support windows (for <code>foyer</code> only).</li>
+<li>Bump rust toolchain to <code>1.81.0</code>.</li>
+<li>Expose in-memory cache builder and cache entry.</li>
+<li>Reduce page fault and vec growth overhead.</li>
+<li>Use bytes size for <code>foyer-bench</code>.</li>
+<li>Fix install deps script.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-08-31">2024-08-31<a href="https://foyer.rs/blog/remote/CHANGELOG#2024-08-31" class="hash-link" aria-label="Direct link to 2024-08-31" title="Direct link to 2024-08-31">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-1">Releases<a href="https://foyer.rs/blog/remote/CHANGELOG#releases-1" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer</td><td>0.11.1</td></tr><tr><td>foyer-common</td><td>0.9.1</td></tr><tr><td>foyer-intrusive</td><td>0.9.1</td></tr><tr><td>foyer-memory</td><td>0.7.1</td></tr><tr><td>foyer-storage</td><td>0.10.1</td></tr><tr><td>foyer-bench</td><td>0.3.1</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-1">Changes<a href="https://foyer.rs/blog/remote/CHANGELOG#changes-1" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Add metrics for serde.</li>
+<li>Refine <code>fetch</code> runtime usage.</li>
+<li>Fix unhandled low-layer errors. #674 #677 #679</li>
+<li>Implement <code>Default</code> for <code>TokioRuntimeConfig</code>.</li>
+<li>Fix typos and format code with unstable features.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-08-21">2024-08-21<a href="https://foyer.rs/blog/remote/CHANGELOG#2024-08-21" class="hash-link" aria-label="Direct link to 2024-08-21" title="Direct link to 2024-08-21">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-2">Releases<a href="https://foyer.rs/blog/remote/CHANGELOG#releases-2" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer</td><td>0.11.0</td></tr><tr><td>foyer-common</td><td>0.9.0</td></tr><tr><td>foyer-intrusive</td><td>0.9.0</td></tr><tr><td>foyer-memory</td><td>0.7.0</td></tr><tr><td>foyer-storage</td><td>0.10.0</td></tr><tr><td>foyer-bench</td><td>0.3.0</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-2">Changes<a href="https://foyer.rs/blog/remote/CHANGELOG#changes-2" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Support disk cache on raw block device.</li>
+<li>Support fine-grained storage engine runtime configuration.</li>
+<li>Enhance performance via reducing page fault.</li>
+<li>Refine storage engine framework for future features.</li>
+<li>Expose <code>Weighter</code> trait.</li>
+<li>Support <code>serde</code> for more configurations.</li>
+<li>Update <code>foyer-bench</code> with more fine-grained configurations.</li>
+<li>Fix panics with <code>None</code> recover mode.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-08-15">2024-08-15<a href="https://foyer.rs/blog/remote/CHANGELOG#2024-08-15" class="hash-link" aria-label="Direct link to 2024-08-15" title="Direct link to 2024-08-15">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-3">Releases<a href="https://foyer.rs/blog/remote/CHANGELOG#releases-3" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer</td><td>0.10.4</td></tr><tr><td>foyer-storage</td><td>0.9.3</td></tr><tr><td>foyer-bench</td><td>0.2.3</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-3">Changes<a href="https://foyer.rs/blog/remote/CHANGELOG#changes-3" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Support serde for recover mode configuration.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-08-14">2024-08-14<a href="https://foyer.rs/blog/remote/CHANGELOG#2024-08-14" class="hash-link" aria-label="Direct link to 2024-08-14" title="Direct link to 2024-08-14">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-4">Releases<a href="https://foyer.rs/blog/remote/CHANGELOG#releases-4" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer</td><td>0.10.2</td></tr><tr><td>foyer-storage</td><td>0.9.2</td></tr><tr><td>foyer-bench</td><td>0.2.2</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-4">Changes<a href="https://foyer.rs/blog/remote/CHANGELOG#changes-4" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Fix panic with "none" recovery mode.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-07-08">2024-07-08<a href="https://foyer.rs/blog/remote/CHANGELOG#2024-07-08" class="hash-link" aria-label="Direct link to 2024-07-08" title="Direct link to 2024-07-08">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-5">Releases<a href="https://foyer.rs/blog/remote/CHANGELOG#releases-5" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer</td><td>0.10.1</td></tr><tr><td>foyer-common</td><td>0.8.1</td></tr><tr><td>foyer-intrusive</td><td>0.8.1</td></tr><tr><td>foyer-memory</td><td>0.6.1</td></tr><tr><td>foyer-storage</td><td>0.9.1</td></tr><tr><td>foyer-bench</td><td>0.2.1</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-5">Changes<a href="https://foyer.rs/blog/remote/CHANGELOG#changes-5" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Refine write model, make flush buffer threshold configurable to mitigate memory usage spike and OOM.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-07-02">2024-07-02<a href="https://foyer.rs/blog/remote/CHANGELOG#2024-07-02" class="hash-link" aria-label="Direct link to 2024-07-02" title="Direct link to 2024-07-02">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-6">Releases<a href="https://foyer.rs/blog/remote/CHANGELOG#releases-6" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer</td><td>0.10.0</td></tr><tr><td>foyer-common</td><td>0.8.0</td></tr><tr><td>foyer-intrusive</td><td>0.8.0</td></tr><tr><td>foyer-memory</td><td>0.6.0</td></tr><tr><td>foyer-storage</td><td>0.9.0</td></tr><tr><td>foyer-bench</td><td>0.2.0</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-6">Changes<a href="https://foyer.rs/blog/remote/CHANGELOG#changes-6" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Introduce tail-based tracing framework with <a href="https://github.com/tikv/minitrace-rust" target="_blank" rel="noopener noreferrer">minitrace</a>. <a href="https://github.com/foyer-rs/foyer/tree/main/examples/tail_based_tracing.rs" target="_blank" rel="noopener noreferrer">Tail-based Tracing Example</a>.</li>
+<li>Fix <code>fetch()</code> disk cache refill on in-memory cache miss.</li>
+<li>Publish <em>foyer</em> logo!</li>
+</ul>
+<img decoding="async" loading="lazy" src="https://raw.githubusercontent.com/foyer-rs/foyer/main/etc/logo/slogan.min.svg" style="width:200px" class="img_ev3q">
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-06-14">2024-06-14<a href="https://foyer.rs/blog/remote/CHANGELOG#2024-06-14" class="hash-link" aria-label="Direct link to 2024-06-14" title="Direct link to 2024-06-14">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-7">Releases<a href="https://foyer.rs/blog/remote/CHANGELOG#releases-7" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer</td><td>0.9.4</td></tr><tr><td>foyer-storage</td><td>0.8.5</td></tr><tr><td>foyer-bench</td><td>0.1.4</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-7">Changes<a href="https://foyer.rs/blog/remote/CHANGELOG#changes-7" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Fix phantom entries after foyer storage recovery. <a href="https://github.com/foyer-rs/foyer/pull/560" target="_blank" rel="noopener noreferrer">#560</a></li>
+<li>Fix hybrid cache hit metrics with <code>fetch()</code> interface. <a href="https://github.com/foyer-rs/foyer/pull/563" target="_blank" rel="noopener noreferrer">#563</a></li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-06-05">2024-06-05<a href="https://foyer.rs/blog/remote/CHANGELOG#2024-06-05" class="hash-link" aria-label="Direct link to 2024-06-05" title="Direct link to 2024-06-05">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-8">Releases<a href="https://foyer.rs/blog/remote/CHANGELOG#releases-8" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer</td><td>0.9.3</td></tr><tr><td>foyer-common</td><td>0.7.3</td></tr><tr><td>foyer-intrusive</td><td>0.7.2</td></tr><tr><td>foyer-memory</td><td>0.5.2</td></tr><tr><td>foyer-storage</td><td>0.8.4</td></tr><tr><td>foyer-bench</td><td>0.1.3</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-8">Changes<a href="https://foyer.rs/blog/remote/CHANGELOG#changes-8" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Hybrid cache <code>fetch()</code> use the dedicated runtime by default if enabled.</li>
+<li>Separate <code>fetch()</code> and <code>fetch_with_runtime()</code> interface for in-memory cache.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-06-04">2024-06-04<a href="https://foyer.rs/blog/remote/CHANGELOG#2024-06-04" class="hash-link" aria-label="Direct link to 2024-06-04" title="Direct link to 2024-06-04">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-9">Releases<a href="https://foyer.rs/blog/remote/CHANGELOG#releases-9" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer-storage</td><td>0.8.3</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-9">Changes<a href="https://foyer.rs/blog/remote/CHANGELOG#changes-9" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Fix "invalid argument (code: 22)" on target aarch64.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-06-03">2024-06-03<a href="https://foyer.rs/blog/remote/CHANGELOG#2024-06-03" class="hash-link" aria-label="Direct link to 2024-06-03" title="Direct link to 2024-06-03">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-10">Releases<a href="https://foyer.rs/blog/remote/CHANGELOG#releases-10" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer</td><td>0.9.2</td></tr><tr><td>foyer-common</td><td>0.7.2</td></tr><tr><td>foyer-intrusive</td><td>0.7.1</td></tr><tr><td>foyer-memory</td><td>0.5.1</td></tr><tr><td>foyer-storage</td><td>0.8.2</td></tr><tr><td>foyer-bench</td><td>0.1.2</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-10">Changes<a href="https://foyer.rs/blog/remote/CHANGELOG#changes-10" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Support customized cache event listener.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-05-31">2024-05-31<a href="https://foyer.rs/blog/remote/CHANGELOG#2024-05-31" class="hash-link" aria-label="Direct link to 2024-05-31" title="Direct link to 2024-05-31">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-11">Releases<a href="https://foyer.rs/blog/remote/CHANGELOG#releases-11" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer</td><td>0.9.1</td></tr><tr><td>foyer-common</td><td>0.7.1</td></tr><tr><td>foyer-intrusive</td><td>0.7.0</td></tr><tr><td>foyer-memory</td><td>0.5.0</td></tr><tr><td>foyer-storage</td><td>0.8.1</td></tr><tr><td>foyer-bench</td><td>0.1.1</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-11">Changes<a href="https://foyer.rs/blog/remote/CHANGELOG#changes-11" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Fix "attempt to subtract with overflow" panic after cloning cache entry. <a href="https://github.com/foyer-rs/foyer/issues/543" target="_blank" rel="noopener noreferrer">#543</a>.</li>
+<li>Fix "assertion failed: base.is_in_indexer()" panic after replacing deposit entry. <a href="https://github.com/foyer-rs/foyer/issues/547" target="_blank" rel="noopener noreferrer">#547</a>.</li>
+<li>Fix setting name for in-memory cache.</li>
+<li>Add region related metrics.</li>
+<li>Introduce <code>strict_assertions</code> and <code>sanity</code> feature for debugging.</li>
+<li><code>foyer-bench</code> support setting eviction algorithm.</li>
+<li>Upgrade <code>metrics</code> to <code>0.23</code>.</li>
+<li>Remove <code>pop()</code> related interface from the in-memory cache.</li>
+<li>Refine intrusive data structure implementation.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-05-27">2024-05-27<a href="https://foyer.rs/blog/remote/CHANGELOG#2024-05-27" class="hash-link" aria-label="Direct link to 2024-05-27" title="Direct link to 2024-05-27">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-12">Releases<a href="https://foyer.rs/blog/remote/CHANGELOG#releases-12" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer</td><td>0.9.0</td></tr><tr><td>foyer-common</td><td>0.7.0</td></tr><tr><td>foyer-intrusive</td><td>0.6.0</td></tr><tr><td>foyer-memory</td><td>0.4.0</td></tr><tr><td>foyer-storage</td><td>0.8.0</td></tr><tr><td>foyer-bench</td><td>0.1.0</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-12">Changes<a href="https://foyer.rs/blog/remote/CHANGELOG#changes-12" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Refine the storage engine to reduce the overhead and boost the performance.
+<ul>
+<li>Hybrid cache memory overhead reduced by ~50%.</li>
+<li>Hybrid cache operation latency reduced by ~80%.</li>
+</ul>
+</li>
+<li>Replace <code>prometheus</code> with <code>metrics</code> to support more flexible metrics collection.</li>
+<li>Introduce <code>foyer-bench</code> to replace the original <code>foyer-storage-bench</code> for better benchmarking.</li>
+<li>Fulfill rust docs for public APIs.</li>
+<li>Introduce tombstone log for updatable persistent cache.</li>
+<li>Reduce unnecessary dependencies.</li>
+<li>More details: <a href="https://github.com/orgs/foyer-rs/projects/2" target="_blank" rel="noopener noreferrer">foyer - Development Roadmap</a>.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-04-28">2024-04-28<a href="https://foyer.rs/blog/remote/CHANGELOG#2024-04-28" class="hash-link" aria-label="Direct link to 2024-04-28" title="Direct link to 2024-04-28">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-13">Releases<a href="https://foyer.rs/blog/remote/CHANGELOG#releases-13" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer</td><td>0.8.9</td></tr><tr><td>foyer-common</td><td>0.6.4</td></tr><tr><td>foyer-memory</td><td>0.3.6</td></tr><tr><td>foyer-storage</td><td>0.7.6</td></tr><tr><td>foyer-storage-bench</td><td>0.7.5</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-13">Changes<a href="https://foyer.rs/blog/remote/CHANGELOG#changes-13" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>feat: Add config to control the recover mode.</li>
+<li>feat: Add config to enable/disable direct i/o. (Enabled by default for large entries optimization.)</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-04-28-1">2024-04-28<a href="https://foyer.rs/blog/remote/CHANGELOG#2024-04-28-1" class="hash-link" aria-label="Direct link to 2024-04-28" title="Direct link to 2024-04-28">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-14">Releases<a href="https://foyer.rs/blog/remote/CHANGELOG#releases-14" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer</td><td>0.8.8</td></tr><tr><td>foyer-memory</td><td>0.3.5</td></tr><tr><td>foyer-storage</td><td>0.7.5</td></tr><tr><td>foyer-storage-bench</td><td>0.7.4</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-14">Changes<a href="https://foyer.rs/blog/remote/CHANGELOG#changes-14" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>feat: Impl <code>Debug</code> for <code>HybridCache</code>.</li>
+<li>feat: Impl <code>serde</code>, <code>Default</code> for eviction configs.</li>
+<li>refactor: Add internal trait <code>EvictionConfig</code> to bound eviction algorithm configs.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-04-27">2024-04-27<a href="https://foyer.rs/blog/remote/CHANGELOG#2024-04-27" class="hash-link" aria-label="Direct link to 2024-04-27" title="Direct link to 2024-04-27">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-15">Releases<a href="https://foyer.rs/blog/remote/CHANGELOG#releases-15" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer</td><td>0.8.7</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-15">Changes<a href="https://foyer.rs/blog/remote/CHANGELOG#changes-15" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Make <code>HybridCache</code> clonable.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-04-27-1">2024-04-27<a href="https://foyer.rs/blog/remote/CHANGELOG#2024-04-27-1" class="hash-link" aria-label="Direct link to 2024-04-27" title="Direct link to 2024-04-27">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-16">Releases<a href="https://foyer.rs/blog/remote/CHANGELOG#releases-16" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer-memory</td><td>0.3.4</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-16">Changes<a href="https://foyer.rs/blog/remote/CHANGELOG#changes-16" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Fix S3FIFO ghost queue.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-04-26">2024-04-26<a href="https://foyer.rs/blog/remote/CHANGELOG#2024-04-26" class="hash-link" aria-label="Direct link to 2024-04-26" title="Direct link to 2024-04-26">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-17">Releases<a href="https://foyer.rs/blog/remote/CHANGELOG#releases-17" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer-storage</td><td>0.7.4</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-17">Changes<a href="https://foyer.rs/blog/remote/CHANGELOG#changes-17" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Fix <code>FsDeviceBuilder</code> on a non-exist directory without capacity given.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-04-26-1">2024-04-26<a href="https://foyer.rs/blog/remote/CHANGELOG#2024-04-26-1" class="hash-link" aria-label="Direct link to 2024-04-26" title="Direct link to 2024-04-26">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-18">Releases<a href="https://foyer.rs/blog/remote/CHANGELOG#releases-18" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer</td><td>0.8.6</td></tr><tr><td>foyer-common</td><td>0.6.3</td></tr><tr><td>foyer-intrusive</td><td>0.5.3</td></tr><tr><td>foyer-memory</td><td>0.3.3</td></tr><tr><td>foyer-storage</td><td>0.7.3</td></tr><tr><td>foyer-storage-bench</td><td>0.7.3</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-18">Changes<a href="https://foyer.rs/blog/remote/CHANGELOG#changes-18" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Remove unused dependencies.</li>
+<li>Remove hakari workspace hack.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-04-26-2">2024-04-26<a href="https://foyer.rs/blog/remote/CHANGELOG#2024-04-26-2" class="hash-link" aria-label="Direct link to 2024-04-26" title="Direct link to 2024-04-26">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-19">Releases<a href="https://foyer.rs/blog/remote/CHANGELOG#releases-19" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer</td><td>0.8.5</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-19">Changes<a href="https://foyer.rs/blog/remote/CHANGELOG#changes-19" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Expose <code>EntryState</code>, <code>HybridEntry</code>.</li>
+<li>Expose <code>StorageWriter</code>, <code>Metrics</code>, <code>get_metrics_registry</code>, <code>set_metrics_registry</code>.</li>
+<li>Expose <code>RangeBoundsExt</code>, <code>BufExt</code>, <code>BufMutExt</code>.</li>
+<li>Re-export <code>ahash::RandomState</code>.</li>
+<li>Loose <code>entry()</code> args trait bounds.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-04-25">2024-04-25<a href="https://foyer.rs/blog/remote/CHANGELOG#2024-04-25" class="hash-link" aria-label="Direct link to 2024-04-25" title="Direct link to 2024-04-25">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-20">Releases<a href="https://foyer.rs/blog/remote/CHANGELOG#releases-20" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer</td><td>0.8.4</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-20">Changes<a href="https://foyer.rs/blog/remote/CHANGELOG#changes-20" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Expose <code>HybridCacheEntry</code>.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-04-25-1">2024-04-25<a href="https://foyer.rs/blog/remote/CHANGELOG#2024-04-25-1" class="hash-link" aria-label="Direct link to 2024-04-25" title="Direct link to 2024-04-25">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-21">Releases<a href="https://foyer.rs/blog/remote/CHANGELOG#releases-21" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer</td><td>0.8.3</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-21">Changes<a href="https://foyer.rs/blog/remote/CHANGELOG#changes-21" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Expose <code>Key</code>, <code>Value</code>, <code>StorageKey</code>, <code>StorageValue</code> traits.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-04-24">2024-04-24<a href="https://foyer.rs/blog/remote/CHANGELOG#2024-04-24" class="hash-link" aria-label="Direct link to 2024-04-24" title="Direct link to 2024-04-24">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-22">Releases<a href="https://foyer.rs/blog/remote/CHANGELOG#releases-22" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer</td><td>0.8.2</td></tr><tr><td>foyer-common</td><td>0.6.2</td></tr><tr><td>foyer-intrusive</td><td>0.5.2</td></tr><tr><td>foyer-memory</td><td>0.3.2</td></tr><tr><td>foyer-storage</td><td>0.7.2</td></tr><tr><td>foyer-storage-bench</td><td>0.7.2</td></tr><tr><td>foyer-workspace-hack</td><td>0.5.2</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-22">Changes<a href="https://foyer.rs/blog/remote/CHANGELOG#changes-22" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Add <code>nightly</code> feature to make it compatible with night toolchain.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-04-24-1">2024-04-24<a href="https://foyer.rs/blog/remote/CHANGELOG#2024-04-24-1" class="hash-link" aria-label="Direct link to 2024-04-24" title="Direct link to 2024-04-24">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-23">Releases<a href="https://foyer.rs/blog/remote/CHANGELOG#releases-23" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer</td><td>0.8.1</td></tr><tr><td>foyer-common</td><td>0.6.1</td></tr><tr><td>foyer-intrusive</td><td>0.5.1</td></tr><tr><td>foyer-memory</td><td>0.3.1</td></tr><tr><td>foyer-storage</td><td>0.7.1</td></tr><tr><td>foyer-storage-bench</td><td>0.7.1</td></tr><tr><td>foyer-workspace-hack</td><td>0.5.1</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-23">Changes<a href="https://foyer.rs/blog/remote/CHANGELOG#changes-23" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Add <code>with_flush</code> to enable flush for each io.</li>
+<li>Loose MSRV to 1.76 .</li>
+<li>Flush the device on store close.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-04-23">2024-04-23<a href="https://foyer.rs/blog/remote/CHANGELOG#2024-04-23" class="hash-link" aria-label="Direct link to 2024-04-23" title="Direct link to 2024-04-23">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-24">Releases<a href="https://foyer.rs/blog/remote/CHANGELOG#releases-24" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer</td><td>0.8.0</td></tr><tr><td>foyer-common</td><td>0.6.0</td></tr><tr><td>foyer-intrusive</td><td>0.5.0</td></tr><tr><td>foyer-memory</td><td>0.3.0</td></tr><tr><td>foyer-storage</td><td>0.7.0</td></tr><tr><td>foyer-storage-bench</td><td>0.7.0</td></tr><tr><td>foyer-workspace-hack</td><td>0.5.0</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-24">Changes<a href="https://foyer.rs/blog/remote/CHANGELOG#changes-24" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Combine in-memory cache and disk cache into <code>HybridCache</code>.</li>
+<li>Refine APIs, make them more user-friendly.</li>
+<li>Refine <code>Key</code>, <code>Value</code>, <code>StorageKey</code>, <code>StorageValue</code> traits.</li>
+<li>Support <code>serde</code> for storage key and value serialization and deserialization.</li>
+<li>Loose trait bounds for key and value.</li>
+<li>Add configurable ghost queue for S3FIFO.</li>
+<li>Fix S3FIFO eviction bugs.</li>
+<li>Add more examples.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-04-11">2024-04-11<a href="https://foyer.rs/blog/remote/CHANGELOG#2024-04-11" class="hash-link" aria-label="Direct link to 2024-04-11" title="Direct link to 2024-04-11">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-25">Releases<a href="https://foyer.rs/blog/remote/CHANGELOG#releases-25" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer</td><td>0.7.0</td></tr><tr><td>foyer-common</td><td>0.5.0</td></tr><tr><td>foyer-intrusive</td><td>0.4.0</td></tr><tr><td>foyer-memory</td><td>0.2.0</td></tr><tr><td>foyer-storage</td><td>0.6.0</td></tr><tr><td>foyer-storage-bench</td><td>0.6.0</td></tr><tr><td>foyer-workspace-hack</td><td>0.4.0</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-25">Changes<a href="https://foyer.rs/blog/remote/CHANGELOG#changes-25" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Make <code>foyer</code> compatible with rust stable toolchain (MSRV = 1.77.2). 🎉</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-04-09">2024-04-09<a href="https://foyer.rs/blog/remote/CHANGELOG#2024-04-09" class="hash-link" aria-label="Direct link to 2024-04-09" title="Direct link to 2024-04-09">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-26">Releases<a href="https://foyer.rs/blog/remote/CHANGELOG#releases-26" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer-storage</td><td>0.5.1</td></tr><tr><td>foyer-memory</td><td>0.1.4</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-26">Changes<a href="https://foyer.rs/blog/remote/CHANGELOG#changes-26" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>fix: Fix panics on <code>state()</code> for s3fifo entry.</li>
+<li>fix: Enable <code>offset_of</code> feature for <code>foyer-storage</code>.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-04-08">2024-04-08<a href="https://foyer.rs/blog/remote/CHANGELOG#2024-04-08" class="hash-link" aria-label="Direct link to 2024-04-08" title="Direct link to 2024-04-08">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-27">Releases<a href="https://foyer.rs/blog/remote/CHANGELOG#releases-27" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer-intrusive</td><td>0.3.1</td></tr><tr><td>foyer-memory</td><td>0.1.3</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-27">Changes<a href="https://foyer.rs/blog/remote/CHANGELOG#changes-27" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>feat: Introduce s3fifo to <code>foyer-memory</code>.</li>
+<li>fix: Fix doctest for <code>foyer-intrusive</code>.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-03-21">2024-03-21<a href="https://foyer.rs/blog/remote/CHANGELOG#2024-03-21" class="hash-link" aria-label="Direct link to 2024-03-21" title="Direct link to 2024-03-21">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-28">Releases<a href="https://foyer.rs/blog/remote/CHANGELOG#releases-28" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer-memory</td><td>0.1.2</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-28">Changes<a href="https://foyer.rs/blog/remote/CHANGELOG#changes-28" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>fix: <code>foyer-memory</code> export <code>DefaultCacheEventListener</code>.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-03-14">2024-03-14<a href="https://foyer.rs/blog/remote/CHANGELOG#2024-03-14" class="hash-link" aria-label="Direct link to 2024-03-14" title="Direct link to 2024-03-14">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-29">Releases<a href="https://foyer.rs/blog/remote/CHANGELOG#releases-29" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer-memory</td><td>0.1.1</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-29">Changes<a href="https://foyer.rs/blog/remote/CHANGELOG#changes-29" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Make eviction config clonable.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-03-13">2024-03-13<a href="https://foyer.rs/blog/remote/CHANGELOG#2024-03-13" class="hash-link" aria-label="Direct link to 2024-03-13" title="Direct link to 2024-03-13">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-30">Releases<a href="https://foyer.rs/blog/remote/CHANGELOG#releases-30" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer-storage-bench</td><td>0.5.1</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-30">Changes<a href="https://foyer.rs/blog/remote/CHANGELOG#changes-30" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Fix <code>foyer-storage-bench</code> build with <code>trace</code> feature.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-03-12">2024-03-12<a href="https://foyer.rs/blog/remote/CHANGELOG#2024-03-12" class="hash-link" aria-label="Direct link to 2024-03-12" title="Direct link to 2024-03-12">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-31">Releases<a href="https://foyer.rs/blog/remote/CHANGELOG#releases-31" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer</td><td>0.6.0</td></tr><tr><td>foyer-common</td><td>0.4.0</td></tr><tr><td>foyer-intrusive</td><td>0.3.0</td></tr><tr><td>foyer-memory</td><td>0.1.0</td></tr><tr><td>foyer-storage</td><td>0.5.0</td></tr><tr><td>foyer-storage-bench</td><td>0.5.0</td></tr><tr><td>foyer-workspace-hack</td><td>0.3.0</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-31">Changes<a href="https://foyer.rs/blog/remote/CHANGELOG#changes-31" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Release foyer in-memory cache as crate <code>foyer-memory</code>.</li>
+<li>Bump other components with changes.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2023-12-28">2023-12-28<a href="https://foyer.rs/blog/remote/CHANGELOG#2023-12-28" class="hash-link" aria-label="Direct link to 2023-12-28" title="Direct link to 2023-12-28">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-32">Releases<a href="https://foyer.rs/blog/remote/CHANGELOG#releases-32" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer</td><td>0.5.0</td></tr><tr><td>foyer-common</td><td>0.3.0</td></tr><tr><td>foyer-intrusive</td><td>0.2.0</td></tr><tr><td>foyer-storage</td><td>0.4.0</td></tr><tr><td>foyer-storage-bench</td><td>0.4.0</td></tr><tr><td>foyer-workspace-hack</td><td>0.2.0</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-32">Changes<a href="https://foyer.rs/blog/remote/CHANGELOG#changes-32" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Bump rust-toolchain to "nightly-2023-12-26".</li>
+<li>Introduce time-series distribution args to bench tool. <a href="https://github.com/foyer-rs/foyer/pull/253" target="_blank" rel="noopener noreferrer">#253</a></li>
+<li>Fix duplicated insert drop metrics.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2023-12-22">2023-12-22<a href="https://foyer.rs/blog/remote/CHANGELOG#2023-12-22" class="hash-link" aria-label="Direct link to 2023-12-22" title="Direct link to 2023-12-22">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-33">Releases<a href="https://foyer.rs/blog/remote/CHANGELOG#releases-33" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer</td><td>0.4.0</td></tr><tr><td>foyer-storage</td><td>0.3.0</td></tr><tr><td>foyer-storage-bench</td><td>0.3.0</td></tr><tr><td>foyer-workspace-hack</td><td>0.1.1</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-33">Changes<a href="https://foyer.rs/blog/remote/CHANGELOG#changes-33" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Remove config <code>flusher_buffer_capacity</code>.</li>
+<li>Fix benchmark tool cache miss ratio.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2023-12-20">2023-12-20<a href="https://foyer.rs/blog/remote/CHANGELOG#2023-12-20" class="hash-link" aria-label="Direct link to 2023-12-20" title="Direct link to 2023-12-20">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-34">Releases<a href="https://foyer.rs/blog/remote/CHANGELOG#releases-34" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer-storage</td><td>0.2.2</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-34">Changes<a href="https://foyer.rs/blog/remote/CHANGELOG#changes-34" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Fix metrics for writer dropping.</li>
+<li>Add interface <code>insert_async_with_callback</code> and <code>insert_if_not_exists_async_with_callback</code> for callers to get the insert result.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2023-12-18">2023-12-18<a href="https://foyer.rs/blog/remote/CHANGELOG#2023-12-18" class="hash-link" aria-label="Direct link to 2023-12-18" title="Direct link to 2023-12-18">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-35">Releases<a href="https://foyer.rs/blog/remote/CHANGELOG#releases-35" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer-storage</td><td>0.2.1</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-35">Changes<a href="https://foyer.rs/blog/remote/CHANGELOG#changes-35" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Introduce the entry size histogram, update metrics.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2023-12-18-1">2023-12-18<a href="https://foyer.rs/blog/remote/CHANGELOG#2023-12-18-1" class="hash-link" aria-label="Direct link to 2023-12-18" title="Direct link to 2023-12-18">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-36">Releases<a href="https://foyer.rs/blog/remote/CHANGELOG#releases-36" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer</td><td>0.3.0</td></tr><tr><td>foyer-common</td><td>0.2.0</td></tr><tr><td>foyer-storage</td><td>0.2.0</td></tr><tr><td>foyer-storage-bench</td><td>0.2.0</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-36">Changes<a href="https://foyer.rs/blog/remote/CHANGELOG#changes-36" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Introduce the associated type <code>Cursor</code> for trait <code>Key</code> and <code>Value</code> to reduce unnecessary buffer copy if possible.</li>
+<li>Remove the ring buffer and continuum tracker for they are no longer needed.</li>
+<li>Update the configuration of the storage engine and the benchmark tool.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2023-11-29">2023-11-29<a href="https://foyer.rs/blog/remote/CHANGELOG#2023-11-29" class="hash-link" aria-label="Direct link to 2023-11-29" title="Direct link to 2023-11-29">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-37">Releases<a href="https://foyer.rs/blog/remote/CHANGELOG#releases-37" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer</td><td>0.2.0</td></tr><tr><td>foyer-common</td><td>0.1.0</td></tr><tr><td>foyer-intrusive</td><td>0.1.0</td></tr><tr><td>foyer-storage</td><td>0.1.0</td></tr><tr><td>foyer-storage-bench</td><td>0.1.0</td></tr><tr><td>foyer-workspace-hack</td><td>0.1.0</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-37">Changes<a href="https://foyer.rs/blog/remote/CHANGELOG#changes-37" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<p>The first version that can be used as file cache.</p>
+<p>The write model and the design of storage engine has been switched from CacheLib navy version to the ring buffer version (which was highly inspired by MySQL 8.0 link_buf).</p>
+<p>Introduces <code>Store</code>, <code>RuntimeStore</code>, <code>LazyStore</code> to simplify usage. In most cases, <code>RuntimeStore</code> is preferred to use a dedicated tokio runtime to serve <strong>foyer</strong> to avoid the influence to the user's runtime. If lazy-load is needed, use <code>RuntimeLazyStore</code> instead.</p>
+<p>The implementation of <strong>foyer</strong> is separated into multiple crates. But importing <code>foyer</code> is enough for it re-exports the crates that <strong>foyer</strong>'s user needs.</p>
+<p>Brief description about the subcrates:</p>
+<ul>
+<li>foyer-common: Provide basic data structures and algorithms.</li>
+<li>foyer-intrusive: Provide intrusive containers for implementing eviction lists and collections. Intrusive data structures provide the ability to implement low-cost multi-index data structures, which will be used for the memory cache in future.</li>
+<li>foyer-storage: Provide the file cache storage engine and wrappers to simplify the code.</li>
+<li>foyer-storage-bench: Runnable benchmark tool for the file cache storage engine.</li>
+<li>foyer-workspace-hack: Generated by <a href="https://crates.io/crates/hakari" target="_blank" rel="noopener noreferrer">hakari</a> to prevent building each crate from triggering building from scratch.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2023-05-12">2023-05-12<a href="https://foyer.rs/blog/remote/CHANGELOG#2023-05-12" class="hash-link" aria-label="Direct link to 2023-05-12" title="Direct link to 2023-05-12">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-38">Releases<a href="https://foyer.rs/blog/remote/CHANGELOG#releases-38" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer</td><td>0.1.0</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-38">Changes<a href="https://foyer.rs/blog/remote/CHANGELOG#changes-38" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<p>Initial version with just basic interfaces.</p>]]></content:encoded>
+            <category>Changelog</category>
+        </item>
+        <item>
+            <title><![CDATA[Welcome]]></title>
+            <link>https://foyer.rs/blog/welcome</link>
+            <guid>https://foyer.rs/blog/welcome</guid>
+            <pubDate>Thu, 26 Aug 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[Docusaurus blogging features are powered by the blog plugin.]]></description>
+            <content:encoded><![CDATA[<p><a href="https://docusaurus.io/docs/blog" target="_blank" rel="noopener noreferrer">Docusaurus blogging features</a> are powered by the <a href="https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog" target="_blank" rel="noopener noreferrer">blog plugin</a>.</p>
+<p>Here are a few tips you might find useful.</p>
+<p>Simply add Markdown files (or folders) to the <code>blog</code> directory.</p>
+<p>Regular blog authors can be added to <code>authors.yml</code>.</p>
+<p>The blog post date can be extracted from filenames, such as:</p>
+<ul>
+<li><code>2019-05-30-welcome.md</code></li>
+<li><code>2019-05-30-welcome/index.md</code></li>
+</ul>
+<p>A blog post folder can be convenient to co-locate blog post images:</p>
+<p><img decoding="async" loading="lazy" alt="Docusaurus Plushie" src="https://foyer.rs/assets/images/docusaurus-plushie-banner-a60f7593abca1e3eef26a9afa244e4fb.jpeg" width="1500" height="500" class="img_ev3q"></p>
+<p>The blog supports tags as well!</p>
+<p><strong>And if you don't want a blog</strong>: just delete this directory, and use <code>blog: false</code> in your Docusaurus config.</p>]]></content:encoded>
+            <category>Facebook</category>
+            <category>Hello</category>
+            <category>Docusaurus</category>
+        </item>
+        <item>
+            <title><![CDATA[MDX Blog Post]]></title>
+            <link>https://foyer.rs/blog/mdx-blog-post</link>
+            <guid>https://foyer.rs/blog/mdx-blog-post</guid>
+            <pubDate>Sun, 01 Aug 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[Blog posts support Docusaurus Markdown features, such as MDX.]]></description>
+            <content:encoded><![CDATA[<p>Blog posts support <a href="https://docusaurus.io/docs/markdown-features" target="_blank" rel="noopener noreferrer">Docusaurus Markdown features</a>, such as <a href="https://mdxjs.com/" target="_blank" rel="noopener noreferrer">MDX</a>.</p>
+<div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>tip</div><div class="admonitionContent_BuS1"><p>Use the power of React to create interactive blog posts.</p></div></div>
+<!-- -->
+<p>For example, use JSX to create an interactive button:</p>
+<div class="language-js codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-js codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token operator">&lt;</span><span class="token plain">button onClick</span><span class="token operator">=</span><span class="token punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token plain"> </span><span class="token arrow operator">=&gt;</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">alert</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token string" style="color:rgb(255, 121, 198)">'button clicked!'</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">}</span><span class="token operator">&gt;</span><span class="token maybe-class-name">Click</span><span class="token plain"> me</span><span class="token operator">!</span><span class="token operator">&lt;</span><span class="token operator">/</span><span class="token plain">button</span><span class="token operator">&gt;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<button>Click me!</button>]]></content:encoded>
+            <category>Docusaurus</category>
+        </item>
+        <item>
+            <title><![CDATA[Long Blog Post]]></title>
+            <link>https://foyer.rs/blog/long-blog-post</link>
+            <guid>https://foyer.rs/blog/long-blog-post</guid>
+            <pubDate>Wed, 29 May 2019 00:00:00 GMT</pubDate>
+            <description><![CDATA[This is the summary of a very long blog post,]]></description>
+            <content:encoded><![CDATA[<p>This is the summary of a very long blog post,</p>
+<p>Use a <code>&lt;!--</code> <code>truncate</code> <code>--&gt;</code> comment to limit blog post size in the list view.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>]]></content:encoded>
+            <category>Hello</category>
+            <category>Docusaurus</category>
+        </item>
+        <item>
+            <title><![CDATA[First Blog Post]]></title>
+            <link>https://foyer.rs/blog/first-blog-post</link>
+            <guid>https://foyer.rs/blog/first-blog-post</guid>
+            <pubDate>Tue, 28 May 2019 00:00:00 GMT</pubDate>
+            <description><![CDATA[Lorem ipsum dolor sit amet...]]></description>
+            <content:encoded><![CDATA[<p>Lorem ipsum dolor sit amet...</p>
+<p>...consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>]]></content:encoded>
+            <category>Hola</category>
+            <category>Docusaurus</category>
+        </item>
+    </channel>
+</rss>

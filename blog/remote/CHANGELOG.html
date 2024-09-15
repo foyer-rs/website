@@ -1,0 +1,1310 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="blog-wrapper blog-post-page plugin-blog plugin-id-default" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.5.2">
+<title data-rh="true">Changelog | foyer</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://foyer.rs/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://foyer.rs/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://foyer.rs/blog/remote/CHANGELOG"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docusaurus_tag" content="default"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docsearch:docusaurus_tag" content="default"><meta data-rh="true" property="og:title" content="Changelog | foyer"><meta data-rh="true" name="description" content="Changelog for foyer."><meta data-rh="true" property="og:description" content="Changelog for foyer."><meta data-rh="true" property="og:type" content="article"><meta data-rh="true" property="article:published_time" content="2023-05-12T03:02:09.000Z"><meta data-rh="true" property="article:author" content="https://github.com/mrcroxx"><meta data-rh="true" property="article:tag" content="Changelog"><link data-rh="true" rel="icon" href="/img/favicon.svg"><link data-rh="true" rel="canonical" href="https://foyer.rs/blog/remote/CHANGELOG"><link data-rh="true" rel="alternate" href="https://foyer.rs/blog/remote/CHANGELOG" hreflang="en"><link data-rh="true" rel="alternate" href="https://foyer.rs/blog/remote/CHANGELOG" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","@id":"https://foyer.rs/blog/remote/CHANGELOG","mainEntityOfPage":"https://foyer.rs/blog/remote/CHANGELOG","url":"https://foyer.rs/blog/remote/CHANGELOG","headline":"Changelog","name":"Changelog","description":"Changelog for foyer.","datePublished":"2023-05-12T03:02:09.000Z","author":{"@type":"Person","name":"Croxx","description":"Author of foyer","url":"https://github.com/mrcroxx","image":"https://github.com/mrcroxx.png"},"keywords":[],"isPartOf":{"@type":"Blog","@id":"https://foyer.rs/blog","name":"Blog"}}</script><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="foyer RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="foyer Atom Feed"><link rel="stylesheet" href="/assets/css/styles.e9ac4549.css">
+<script src="/assets/js/runtime~main.5b6729f8.js" defer="defer"></script>
+<script src="/assets/js/main.252d72ee.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/logo.svg" alt="foyer logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/logo.svg" alt="foyer logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">foyer</b></a><a class="navbar__item navbar__link" href="/docs/category/tutorial">Learn</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/blog">Blog</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/blog/remote/CHANGELOG">Changelog</a></div><div class="navbar__items navbar__items--right"><a href="https://crates.io/crates/foyer" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">crates.io<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><a href="https://docs.rs/foyer" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">Docs.rs<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><a href="https://github.com/foyer-rs/foyer" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="container margin-vert--lg"><div class="row"><aside class="col col--3"><nav class="sidebar_re4s thin-scrollbar" aria-label="Blog recent posts navigation"><div class="sidebarItemTitle_pO2u margin-bottom--md">Recent posts</div><div role="group"><h3 class="yearGroupHeading_rMGB">2023</h3><ul class="sidebarItemList_Yudw clean-list"><li class="sidebarItem__DBe"><a aria-current="page" class="sidebarItemLink_mo7H sidebarItemLinkActive_I1ZP" href="/blog/remote/CHANGELOG">Changelog</a></li></ul></div><div role="group"><h3 class="yearGroupHeading_rMGB">2021</h3><ul class="sidebarItemList_Yudw clean-list"><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/blog/welcome">Welcome</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/blog/mdx-blog-post">MDX Blog Post</a></li></ul></div><div role="group"><h3 class="yearGroupHeading_rMGB">2019</h3><ul class="sidebarItemList_Yudw clean-list"><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/blog/long-blog-post">Long Blog Post</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/blog/first-blog-post">First Blog Post</a></li></ul></div></nav></aside><main class="col col--7"><article><header><h1 class="title_f1Hy">Changelog</h1><div class="container_mt6G margin-vert--md"><time datetime="2023-05-12T03:02:09.000Z">May 12, 2023</time> · <!-- -->12 min read</div><div class="margin-top--md margin-bottom--sm row"><div class="col col--12 authorCol_Hf19"><div class="avatar margin-bottom--sm"><a class="avatar__photo-link" href="/blog/authors/mrcroxx"><img class="avatar__photo authorImage_XqGP" src="https://github.com/mrcroxx.png" alt="Croxx"></a><div class="avatar__intro authorDetails_lV9A"><div class="avatar__name"><a href="/blog/authors/mrcroxx"><span class="authorName_yefp">Croxx</span></a></div><small class="authorTitle_nd0D" title="Author of foyer">Author of foyer</small><div class="authorSocials_rSDt"><a href="https://x.com/CroxxMr" target="_blank" rel="noopener noreferrer" class="authorSocialLink_owbf" title="X"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" viewBox="0 0 1200 1227" class="authorSocialLink_owbf xSvg_y3PF" style="--dark:#000;--light:#fff"><path d="M714.163 519.284 1160.89 0h-105.86L667.137 450.887 357.328 0H0l468.492 681.821L0 1226.37h105.866l409.625-476.152 327.181 476.152H1200L714.137 519.284h.026ZM569.165 687.828l-47.468-67.894-377.686-540.24h162.604l304.797 435.991 47.468 67.894 396.2 566.721H892.476L569.165 687.854v-.026Z"></path></svg></a><a href="https://github.com/mrcroxx" target="_blank" rel="noopener noreferrer" class="authorSocialLink_owbf" title="GitHub"><svg viewBox="0 0 256 250" width="1em" height="1em" class="authorSocialLink_owbf githubSvg_Uu4N" xmlns="http://www.w3.org/2000/svg" style="--dark:#000;--light:#fff" preserveAspectRatio="xMidYMid"><path d="M128.001 0C57.317 0 0 57.307 0 128.001c0 56.554 36.676 104.535 87.535 121.46 6.397 1.185 8.746-2.777 8.746-6.158 0-3.052-.12-13.135-.174-23.83-35.61 7.742-43.124-15.103-43.124-15.103-5.823-14.795-14.213-18.73-14.213-18.73-11.613-7.944.876-7.78.876-7.78 12.853.902 19.621 13.19 19.621 13.19 11.417 19.568 29.945 13.911 37.249 10.64 1.149-8.272 4.466-13.92 8.127-17.116-28.431-3.236-58.318-14.212-58.318-63.258 0-13.975 5-25.394 13.188-34.358-1.329-3.224-5.71-16.242 1.24-33.874 0 0 10.749-3.44 35.21 13.121 10.21-2.836 21.16-4.258 32.038-4.307 10.878.049 21.837 1.47 32.066 4.307 24.431-16.56 35.165-13.12 35.165-13.12 6.967 17.63 2.584 30.65 1.255 33.873 8.207 8.964 13.173 20.383 13.173 34.358 0 49.163-29.944 59.988-58.447 63.157 4.591 3.972 8.682 11.762 8.682 23.704 0 17.126-.148 30.91-.148 35.126 0 3.407 2.304 7.398 8.792 6.14C219.37 232.5 256 184.537 256 128.002 256 57.307 198.691 0 128.001 0Zm-80.06 182.34c-.282.636-1.283.827-2.194.39-.929-.417-1.45-1.284-1.15-1.922.276-.655 1.279-.838 2.205-.399.93.418 1.46 1.293 1.139 1.931Zm6.296 5.618c-.61.566-1.804.303-2.614-.591-.837-.892-.994-2.086-.375-2.66.63-.566 1.787-.301 2.626.591.838.903 1 2.088.363 2.66Zm4.32 7.188c-.785.545-2.067.034-2.86-1.104-.784-1.138-.784-2.503.017-3.05.795-.547 2.058-.055 2.861 1.075.782 1.157.782 2.522-.019 3.08Zm7.304 8.325c-.701.774-2.196.566-3.29-.49-1.119-1.032-1.43-2.496-.726-3.27.71-.776 2.213-.558 3.315.49 1.11 1.03 1.45 2.505.701 3.27Zm9.442 2.81c-.31 1.003-1.75 1.459-3.199 1.033-1.448-.439-2.395-1.613-2.103-2.626.301-1.01 1.747-1.484 3.207-1.028 1.446.436 2.396 1.602 2.095 2.622Zm10.744 1.193c.036 1.055-1.193 1.93-2.715 1.95-1.53.034-2.769-.82-2.786-1.86 0-1.065 1.202-1.932 2.733-1.958 1.522-.03 2.768.818 2.768 1.868Zm10.555-.405c.182 1.03-.875 2.088-2.387 2.37-1.485.271-2.861-.365-3.05-1.386-.184-1.056.893-2.114 2.376-2.387 1.514-.263 2.868.356 3.061 1.403Z"></path></svg></a><a href="https://www.linkedin.com/in/mrcroxx/" target="_blank" rel="noopener noreferrer" class="authorSocialLink_owbf" title="LinkedIn"><svg width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" viewBox="0 0 256 256" class="authorSocialLink_owbf"><path d="M218.123 218.127h-37.931v-59.403c0-14.165-.253-32.4-19.728-32.4-19.756 0-22.779 15.434-22.779 31.369v60.43h-37.93V95.967h36.413v16.694h.51a39.907 39.907 0 0 1 35.928-19.733c38.445 0 45.533 25.288 45.533 58.186l-.016 67.013ZM56.955 79.27c-12.157.002-22.014-9.852-22.016-22.009-.002-12.157 9.851-22.014 22.008-22.016 12.157-.003 22.014 9.851 22.016 22.008A22.013 22.013 0 0 1 56.955 79.27m18.966 138.858H37.95V95.967h37.97v122.16ZM237.033.018H18.89C8.58-.098.125 8.161-.001 18.471v219.053c.122 10.315 8.576 18.582 18.89 18.474h218.144c10.336.128 18.823-8.139 18.966-18.474V18.454c-.147-10.33-8.635-18.588-18.966-18.453" fill="#0A66C2"></path></svg></a><a href="https://blog.mrcroxx.com" target="_blank" rel="noopener noreferrer" class="authorSocialLink_owbf" title="newsletter"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="authorSocialLink_owbf"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path><path d="M3.6 9h16.8"></path><path d="M3.6 15h16.8"></path><path d="M11.5 3a17 17 0 0 0 0 18"></path><path d="M12.5 3a17 17 0 0 1 0 18"></path></svg></a></div></div></div></div></div></header><div id="__blog-post-container" class="markdown"><h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-09-12">2024-09-12<a href="#2024-09-12" class="hash-link" aria-label="Direct link to 2024-09-12" title="Direct link to 2024-09-12">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases">Releases<a href="#releases" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer</td><td>0.11.2</td></tr><tr><td>foyer-common</td><td>0.9.2</td></tr><tr><td>foyer-intrusive</td><td>0.9.2</td></tr><tr><td>foyer-memory</td><td>0.7.2</td></tr><tr><td>foyer-storage</td><td>0.10.2</td></tr><tr><td>foyer-bench</td><td>0.3.2</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes">Changes<a href="#changes" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Support windows (for <code>foyer</code> only).</li>
+<li>Bump rust toolchain to <code>1.81.0</code>.</li>
+<li>Expose in-memory cache builder and cache entry.</li>
+<li>Reduce page fault and vec growth overhead.</li>
+<li>Use bytes size for <code>foyer-bench</code>.</li>
+<li>Fix install deps script.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-08-31">2024-08-31<a href="#2024-08-31" class="hash-link" aria-label="Direct link to 2024-08-31" title="Direct link to 2024-08-31">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-1">Releases<a href="#releases-1" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer</td><td>0.11.1</td></tr><tr><td>foyer-common</td><td>0.9.1</td></tr><tr><td>foyer-intrusive</td><td>0.9.1</td></tr><tr><td>foyer-memory</td><td>0.7.1</td></tr><tr><td>foyer-storage</td><td>0.10.1</td></tr><tr><td>foyer-bench</td><td>0.3.1</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-1">Changes<a href="#changes-1" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Add metrics for serde.</li>
+<li>Refine <code>fetch</code> runtime usage.</li>
+<li>Fix unhandled low-layer errors. #674 #677 #679</li>
+<li>Implement <code>Default</code> for <code>TokioRuntimeConfig</code>.</li>
+<li>Fix typos and format code with unstable features.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-08-21">2024-08-21<a href="#2024-08-21" class="hash-link" aria-label="Direct link to 2024-08-21" title="Direct link to 2024-08-21">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-2">Releases<a href="#releases-2" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer</td><td>0.11.0</td></tr><tr><td>foyer-common</td><td>0.9.0</td></tr><tr><td>foyer-intrusive</td><td>0.9.0</td></tr><tr><td>foyer-memory</td><td>0.7.0</td></tr><tr><td>foyer-storage</td><td>0.10.0</td></tr><tr><td>foyer-bench</td><td>0.3.0</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-2">Changes<a href="#changes-2" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Support disk cache on raw block device.</li>
+<li>Support fine-grained storage engine runtime configuration.</li>
+<li>Enhance performance via reducing page fault.</li>
+<li>Refine storage engine framework for future features.</li>
+<li>Expose <code>Weighter</code> trait.</li>
+<li>Support <code>serde</code> for more configurations.</li>
+<li>Update <code>foyer-bench</code> with more fine-grained configurations.</li>
+<li>Fix panics with <code>None</code> recover mode.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-08-15">2024-08-15<a href="#2024-08-15" class="hash-link" aria-label="Direct link to 2024-08-15" title="Direct link to 2024-08-15">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-3">Releases<a href="#releases-3" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer</td><td>0.10.4</td></tr><tr><td>foyer-storage</td><td>0.9.3</td></tr><tr><td>foyer-bench</td><td>0.2.3</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-3">Changes<a href="#changes-3" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Support serde for recover mode configuration.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-08-14">2024-08-14<a href="#2024-08-14" class="hash-link" aria-label="Direct link to 2024-08-14" title="Direct link to 2024-08-14">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-4">Releases<a href="#releases-4" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer</td><td>0.10.2</td></tr><tr><td>foyer-storage</td><td>0.9.2</td></tr><tr><td>foyer-bench</td><td>0.2.2</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-4">Changes<a href="#changes-4" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Fix panic with &quot;none&quot; recovery mode.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-07-08">2024-07-08<a href="#2024-07-08" class="hash-link" aria-label="Direct link to 2024-07-08" title="Direct link to 2024-07-08">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-5">Releases<a href="#releases-5" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer</td><td>0.10.1</td></tr><tr><td>foyer-common</td><td>0.8.1</td></tr><tr><td>foyer-intrusive</td><td>0.8.1</td></tr><tr><td>foyer-memory</td><td>0.6.1</td></tr><tr><td>foyer-storage</td><td>0.9.1</td></tr><tr><td>foyer-bench</td><td>0.2.1</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-5">Changes<a href="#changes-5" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Refine write model, make flush buffer threshold configurable to mitigate memory usage spike and OOM.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-07-02">2024-07-02<a href="#2024-07-02" class="hash-link" aria-label="Direct link to 2024-07-02" title="Direct link to 2024-07-02">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-6">Releases<a href="#releases-6" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer</td><td>0.10.0</td></tr><tr><td>foyer-common</td><td>0.8.0</td></tr><tr><td>foyer-intrusive</td><td>0.8.0</td></tr><tr><td>foyer-memory</td><td>0.6.0</td></tr><tr><td>foyer-storage</td><td>0.9.0</td></tr><tr><td>foyer-bench</td><td>0.2.0</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-6">Changes<a href="#changes-6" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Introduce tail-based tracing framework with <a href="https://github.com/tikv/minitrace-rust" target="_blank" rel="noopener noreferrer">minitrace</a>. <a href="https://github.com/foyer-rs/foyer/tree/main/examples/tail_based_tracing.rs" target="_blank" rel="noopener noreferrer">Tail-based Tracing Example</a>.</li>
+<li>Fix <code>fetch()</code> disk cache refill on in-memory cache miss.</li>
+<li>Publish <em>foyer</em> logo!</li>
+</ul>
+<img decoding="async" loading="lazy" src="https://raw.githubusercontent.com/foyer-rs/foyer/main/etc/logo/slogan.min.svg" style="width:200px" class="img_ev3q">
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-06-14">2024-06-14<a href="#2024-06-14" class="hash-link" aria-label="Direct link to 2024-06-14" title="Direct link to 2024-06-14">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-7">Releases<a href="#releases-7" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer</td><td>0.9.4</td></tr><tr><td>foyer-storage</td><td>0.8.5</td></tr><tr><td>foyer-bench</td><td>0.1.4</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-7">Changes<a href="#changes-7" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Fix phantom entries after foyer storage recovery. <a href="https://github.com/foyer-rs/foyer/pull/560" target="_blank" rel="noopener noreferrer">#560</a></li>
+<li>Fix hybrid cache hit metrics with <code>fetch()</code> interface. <a href="https://github.com/foyer-rs/foyer/pull/563" target="_blank" rel="noopener noreferrer">#563</a></li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-06-05">2024-06-05<a href="#2024-06-05" class="hash-link" aria-label="Direct link to 2024-06-05" title="Direct link to 2024-06-05">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-8">Releases<a href="#releases-8" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer</td><td>0.9.3</td></tr><tr><td>foyer-common</td><td>0.7.3</td></tr><tr><td>foyer-intrusive</td><td>0.7.2</td></tr><tr><td>foyer-memory</td><td>0.5.2</td></tr><tr><td>foyer-storage</td><td>0.8.4</td></tr><tr><td>foyer-bench</td><td>0.1.3</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-8">Changes<a href="#changes-8" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Hybrid cache <code>fetch()</code> use the dedicated runtime by default if enabled.</li>
+<li>Separate <code>fetch()</code> and <code>fetch_with_runtime()</code> interface for in-memory cache.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-06-04">2024-06-04<a href="#2024-06-04" class="hash-link" aria-label="Direct link to 2024-06-04" title="Direct link to 2024-06-04">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-9">Releases<a href="#releases-9" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer-storage</td><td>0.8.3</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-9">Changes<a href="#changes-9" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Fix &quot;invalid argument (code: 22)&quot; on target aarch64.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-06-03">2024-06-03<a href="#2024-06-03" class="hash-link" aria-label="Direct link to 2024-06-03" title="Direct link to 2024-06-03">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-10">Releases<a href="#releases-10" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer</td><td>0.9.2</td></tr><tr><td>foyer-common</td><td>0.7.2</td></tr><tr><td>foyer-intrusive</td><td>0.7.1</td></tr><tr><td>foyer-memory</td><td>0.5.1</td></tr><tr><td>foyer-storage</td><td>0.8.2</td></tr><tr><td>foyer-bench</td><td>0.1.2</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-10">Changes<a href="#changes-10" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Support customized cache event listener.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-05-31">2024-05-31<a href="#2024-05-31" class="hash-link" aria-label="Direct link to 2024-05-31" title="Direct link to 2024-05-31">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-11">Releases<a href="#releases-11" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer</td><td>0.9.1</td></tr><tr><td>foyer-common</td><td>0.7.1</td></tr><tr><td>foyer-intrusive</td><td>0.7.0</td></tr><tr><td>foyer-memory</td><td>0.5.0</td></tr><tr><td>foyer-storage</td><td>0.8.1</td></tr><tr><td>foyer-bench</td><td>0.1.1</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-11">Changes<a href="#changes-11" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Fix &quot;attempt to subtract with overflow&quot; panic after cloning cache entry. <a href="https://github.com/foyer-rs/foyer/issues/543" target="_blank" rel="noopener noreferrer">#543</a>.</li>
+<li>Fix &quot;assertion failed: base.is_in_indexer()&quot; panic after replacing deposit entry. <a href="https://github.com/foyer-rs/foyer/issues/547" target="_blank" rel="noopener noreferrer">#547</a>.</li>
+<li>Fix setting name for in-memory cache.</li>
+<li>Add region related metrics.</li>
+<li>Introduce <code>strict_assertions</code> and <code>sanity</code> feature for debugging.</li>
+<li><code>foyer-bench</code> support setting eviction algorithm.</li>
+<li>Upgrade <code>metrics</code> to <code>0.23</code>.</li>
+<li>Remove <code>pop()</code> related interface from the in-memory cache.</li>
+<li>Refine intrusive data structure implementation.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-05-27">2024-05-27<a href="#2024-05-27" class="hash-link" aria-label="Direct link to 2024-05-27" title="Direct link to 2024-05-27">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-12">Releases<a href="#releases-12" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer</td><td>0.9.0</td></tr><tr><td>foyer-common</td><td>0.7.0</td></tr><tr><td>foyer-intrusive</td><td>0.6.0</td></tr><tr><td>foyer-memory</td><td>0.4.0</td></tr><tr><td>foyer-storage</td><td>0.8.0</td></tr><tr><td>foyer-bench</td><td>0.1.0</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-12">Changes<a href="#changes-12" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Refine the storage engine to reduce the overhead and boost the performance.
+<ul>
+<li>Hybrid cache memory overhead reduced by ~50%.</li>
+<li>Hybrid cache operation latency reduced by ~80%.</li>
+</ul>
+</li>
+<li>Replace <code>prometheus</code> with <code>metrics</code> to support more flexible metrics collection.</li>
+<li>Introduce <code>foyer-bench</code> to replace the original <code>foyer-storage-bench</code> for better benchmarking.</li>
+<li>Fulfill rust docs for public APIs.</li>
+<li>Introduce tombstone log for updatable persistent cache.</li>
+<li>Reduce unnecessary dependencies.</li>
+<li>More details: <a href="https://github.com/orgs/foyer-rs/projects/2" target="_blank" rel="noopener noreferrer">foyer - Development Roadmap</a>.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-04-28">2024-04-28<a href="#2024-04-28" class="hash-link" aria-label="Direct link to 2024-04-28" title="Direct link to 2024-04-28">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-13">Releases<a href="#releases-13" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer</td><td>0.8.9</td></tr><tr><td>foyer-common</td><td>0.6.4</td></tr><tr><td>foyer-memory</td><td>0.3.6</td></tr><tr><td>foyer-storage</td><td>0.7.6</td></tr><tr><td>foyer-storage-bench</td><td>0.7.5</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-13">Changes<a href="#changes-13" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>feat: Add config to control the recover mode.</li>
+<li>feat: Add config to enable/disable direct i/o. (Enabled by default for large entries optimization.)</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-04-28-1">2024-04-28<a href="#2024-04-28-1" class="hash-link" aria-label="Direct link to 2024-04-28" title="Direct link to 2024-04-28">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-14">Releases<a href="#releases-14" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer</td><td>0.8.8</td></tr><tr><td>foyer-memory</td><td>0.3.5</td></tr><tr><td>foyer-storage</td><td>0.7.5</td></tr><tr><td>foyer-storage-bench</td><td>0.7.4</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-14">Changes<a href="#changes-14" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>feat: Impl <code>Debug</code> for <code>HybridCache</code>.</li>
+<li>feat: Impl <code>serde</code>, <code>Default</code> for eviction configs.</li>
+<li>refactor: Add internal trait <code>EvictionConfig</code> to bound eviction algorithm configs.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-04-27">2024-04-27<a href="#2024-04-27" class="hash-link" aria-label="Direct link to 2024-04-27" title="Direct link to 2024-04-27">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-15">Releases<a href="#releases-15" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer</td><td>0.8.7</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-15">Changes<a href="#changes-15" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Make <code>HybridCache</code> clonable.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-04-27-1">2024-04-27<a href="#2024-04-27-1" class="hash-link" aria-label="Direct link to 2024-04-27" title="Direct link to 2024-04-27">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-16">Releases<a href="#releases-16" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer-memory</td><td>0.3.4</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-16">Changes<a href="#changes-16" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Fix S3FIFO ghost queue.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-04-26">2024-04-26<a href="#2024-04-26" class="hash-link" aria-label="Direct link to 2024-04-26" title="Direct link to 2024-04-26">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-17">Releases<a href="#releases-17" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer-storage</td><td>0.7.4</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-17">Changes<a href="#changes-17" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Fix <code>FsDeviceBuilder</code> on a non-exist directory without capacity given.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-04-26-1">2024-04-26<a href="#2024-04-26-1" class="hash-link" aria-label="Direct link to 2024-04-26" title="Direct link to 2024-04-26">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-18">Releases<a href="#releases-18" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer</td><td>0.8.6</td></tr><tr><td>foyer-common</td><td>0.6.3</td></tr><tr><td>foyer-intrusive</td><td>0.5.3</td></tr><tr><td>foyer-memory</td><td>0.3.3</td></tr><tr><td>foyer-storage</td><td>0.7.3</td></tr><tr><td>foyer-storage-bench</td><td>0.7.3</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-18">Changes<a href="#changes-18" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Remove unused dependencies.</li>
+<li>Remove hakari workspace hack.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-04-26-2">2024-04-26<a href="#2024-04-26-2" class="hash-link" aria-label="Direct link to 2024-04-26" title="Direct link to 2024-04-26">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-19">Releases<a href="#releases-19" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer</td><td>0.8.5</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-19">Changes<a href="#changes-19" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Expose <code>EntryState</code>, <code>HybridEntry</code>.</li>
+<li>Expose <code>StorageWriter</code>, <code>Metrics</code>, <code>get_metrics_registry</code>, <code>set_metrics_registry</code>.</li>
+<li>Expose <code>RangeBoundsExt</code>, <code>BufExt</code>, <code>BufMutExt</code>.</li>
+<li>Re-export <code>ahash::RandomState</code>.</li>
+<li>Loose <code>entry()</code> args trait bounds.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-04-25">2024-04-25<a href="#2024-04-25" class="hash-link" aria-label="Direct link to 2024-04-25" title="Direct link to 2024-04-25">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-20">Releases<a href="#releases-20" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer</td><td>0.8.4</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-20">Changes<a href="#changes-20" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Expose <code>HybridCacheEntry</code>.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-04-25-1">2024-04-25<a href="#2024-04-25-1" class="hash-link" aria-label="Direct link to 2024-04-25" title="Direct link to 2024-04-25">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-21">Releases<a href="#releases-21" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer</td><td>0.8.3</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-21">Changes<a href="#changes-21" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Expose <code>Key</code>, <code>Value</code>, <code>StorageKey</code>, <code>StorageValue</code> traits.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-04-24">2024-04-24<a href="#2024-04-24" class="hash-link" aria-label="Direct link to 2024-04-24" title="Direct link to 2024-04-24">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-22">Releases<a href="#releases-22" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer</td><td>0.8.2</td></tr><tr><td>foyer-common</td><td>0.6.2</td></tr><tr><td>foyer-intrusive</td><td>0.5.2</td></tr><tr><td>foyer-memory</td><td>0.3.2</td></tr><tr><td>foyer-storage</td><td>0.7.2</td></tr><tr><td>foyer-storage-bench</td><td>0.7.2</td></tr><tr><td>foyer-workspace-hack</td><td>0.5.2</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-22">Changes<a href="#changes-22" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Add <code>nightly</code> feature to make it compatible with night toolchain.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-04-24-1">2024-04-24<a href="#2024-04-24-1" class="hash-link" aria-label="Direct link to 2024-04-24" title="Direct link to 2024-04-24">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-23">Releases<a href="#releases-23" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer</td><td>0.8.1</td></tr><tr><td>foyer-common</td><td>0.6.1</td></tr><tr><td>foyer-intrusive</td><td>0.5.1</td></tr><tr><td>foyer-memory</td><td>0.3.1</td></tr><tr><td>foyer-storage</td><td>0.7.1</td></tr><tr><td>foyer-storage-bench</td><td>0.7.1</td></tr><tr><td>foyer-workspace-hack</td><td>0.5.1</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-23">Changes<a href="#changes-23" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Add <code>with_flush</code> to enable flush for each io.</li>
+<li>Loose MSRV to 1.76 .</li>
+<li>Flush the device on store close.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-04-23">2024-04-23<a href="#2024-04-23" class="hash-link" aria-label="Direct link to 2024-04-23" title="Direct link to 2024-04-23">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-24">Releases<a href="#releases-24" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer</td><td>0.8.0</td></tr><tr><td>foyer-common</td><td>0.6.0</td></tr><tr><td>foyer-intrusive</td><td>0.5.0</td></tr><tr><td>foyer-memory</td><td>0.3.0</td></tr><tr><td>foyer-storage</td><td>0.7.0</td></tr><tr><td>foyer-storage-bench</td><td>0.7.0</td></tr><tr><td>foyer-workspace-hack</td><td>0.5.0</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-24">Changes<a href="#changes-24" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Combine in-memory cache and disk cache into <code>HybridCache</code>.</li>
+<li>Refine APIs, make them more user-friendly.</li>
+<li>Refine <code>Key</code>, <code>Value</code>, <code>StorageKey</code>, <code>StorageValue</code> traits.</li>
+<li>Support <code>serde</code> for storage key and value serialization and deserialization.</li>
+<li>Loose trait bounds for key and value.</li>
+<li>Add configurable ghost queue for S3FIFO.</li>
+<li>Fix S3FIFO eviction bugs.</li>
+<li>Add more examples.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-04-11">2024-04-11<a href="#2024-04-11" class="hash-link" aria-label="Direct link to 2024-04-11" title="Direct link to 2024-04-11">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-25">Releases<a href="#releases-25" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer</td><td>0.7.0</td></tr><tr><td>foyer-common</td><td>0.5.0</td></tr><tr><td>foyer-intrusive</td><td>0.4.0</td></tr><tr><td>foyer-memory</td><td>0.2.0</td></tr><tr><td>foyer-storage</td><td>0.6.0</td></tr><tr><td>foyer-storage-bench</td><td>0.6.0</td></tr><tr><td>foyer-workspace-hack</td><td>0.4.0</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-25">Changes<a href="#changes-25" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Make <code>foyer</code> compatible with rust stable toolchain (MSRV = 1.77.2). 🎉</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-04-09">2024-04-09<a href="#2024-04-09" class="hash-link" aria-label="Direct link to 2024-04-09" title="Direct link to 2024-04-09">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-26">Releases<a href="#releases-26" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer-storage</td><td>0.5.1</td></tr><tr><td>foyer-memory</td><td>0.1.4</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-26">Changes<a href="#changes-26" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>fix: Fix panics on <code>state()</code> for s3fifo entry.</li>
+<li>fix: Enable <code>offset_of</code> feature for <code>foyer-storage</code>.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-04-08">2024-04-08<a href="#2024-04-08" class="hash-link" aria-label="Direct link to 2024-04-08" title="Direct link to 2024-04-08">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-27">Releases<a href="#releases-27" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer-intrusive</td><td>0.3.1</td></tr><tr><td>foyer-memory</td><td>0.1.3</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-27">Changes<a href="#changes-27" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>feat: Introduce s3fifo to <code>foyer-memory</code>.</li>
+<li>fix: Fix doctest for <code>foyer-intrusive</code>.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-03-21">2024-03-21<a href="#2024-03-21" class="hash-link" aria-label="Direct link to 2024-03-21" title="Direct link to 2024-03-21">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-28">Releases<a href="#releases-28" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer-memory</td><td>0.1.2</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-28">Changes<a href="#changes-28" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>fix: <code>foyer-memory</code> export <code>DefaultCacheEventListener</code>.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-03-14">2024-03-14<a href="#2024-03-14" class="hash-link" aria-label="Direct link to 2024-03-14" title="Direct link to 2024-03-14">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-29">Releases<a href="#releases-29" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer-memory</td><td>0.1.1</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-29">Changes<a href="#changes-29" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Make eviction config clonable.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-03-13">2024-03-13<a href="#2024-03-13" class="hash-link" aria-label="Direct link to 2024-03-13" title="Direct link to 2024-03-13">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-30">Releases<a href="#releases-30" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer-storage-bench</td><td>0.5.1</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-30">Changes<a href="#changes-30" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Fix <code>foyer-storage-bench</code> build with <code>trace</code> feature.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2024-03-12">2024-03-12<a href="#2024-03-12" class="hash-link" aria-label="Direct link to 2024-03-12" title="Direct link to 2024-03-12">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-31">Releases<a href="#releases-31" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer</td><td>0.6.0</td></tr><tr><td>foyer-common</td><td>0.4.0</td></tr><tr><td>foyer-intrusive</td><td>0.3.0</td></tr><tr><td>foyer-memory</td><td>0.1.0</td></tr><tr><td>foyer-storage</td><td>0.5.0</td></tr><tr><td>foyer-storage-bench</td><td>0.5.0</td></tr><tr><td>foyer-workspace-hack</td><td>0.3.0</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-31">Changes<a href="#changes-31" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Release foyer in-memory cache as crate <code>foyer-memory</code>.</li>
+<li>Bump other components with changes.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2023-12-28">2023-12-28<a href="#2023-12-28" class="hash-link" aria-label="Direct link to 2023-12-28" title="Direct link to 2023-12-28">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-32">Releases<a href="#releases-32" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer</td><td>0.5.0</td></tr><tr><td>foyer-common</td><td>0.3.0</td></tr><tr><td>foyer-intrusive</td><td>0.2.0</td></tr><tr><td>foyer-storage</td><td>0.4.0</td></tr><tr><td>foyer-storage-bench</td><td>0.4.0</td></tr><tr><td>foyer-workspace-hack</td><td>0.2.0</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-32">Changes<a href="#changes-32" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Bump rust-toolchain to &quot;nightly-2023-12-26&quot;.</li>
+<li>Introduce time-series distribution args to bench tool. <a href="https://github.com/foyer-rs/foyer/pull/253" target="_blank" rel="noopener noreferrer">#253</a></li>
+<li>Fix duplicated insert drop metrics.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2023-12-22">2023-12-22<a href="#2023-12-22" class="hash-link" aria-label="Direct link to 2023-12-22" title="Direct link to 2023-12-22">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-33">Releases<a href="#releases-33" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer</td><td>0.4.0</td></tr><tr><td>foyer-storage</td><td>0.3.0</td></tr><tr><td>foyer-storage-bench</td><td>0.3.0</td></tr><tr><td>foyer-workspace-hack</td><td>0.1.1</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-33">Changes<a href="#changes-33" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Remove config <code>flusher_buffer_capacity</code>.</li>
+<li>Fix benchmark tool cache miss ratio.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2023-12-20">2023-12-20<a href="#2023-12-20" class="hash-link" aria-label="Direct link to 2023-12-20" title="Direct link to 2023-12-20">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-34">Releases<a href="#releases-34" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer-storage</td><td>0.2.2</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-34">Changes<a href="#changes-34" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Fix metrics for writer dropping.</li>
+<li>Add interface <code>insert_async_with_callback</code> and <code>insert_if_not_exists_async_with_callback</code> for callers to get the insert result.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2023-12-18">2023-12-18<a href="#2023-12-18" class="hash-link" aria-label="Direct link to 2023-12-18" title="Direct link to 2023-12-18">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-35">Releases<a href="#releases-35" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer-storage</td><td>0.2.1</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-35">Changes<a href="#changes-35" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Introduce the entry size histogram, update metrics.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2023-12-18-1">2023-12-18<a href="#2023-12-18-1" class="hash-link" aria-label="Direct link to 2023-12-18" title="Direct link to 2023-12-18">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-36">Releases<a href="#releases-36" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer</td><td>0.3.0</td></tr><tr><td>foyer-common</td><td>0.2.0</td></tr><tr><td>foyer-storage</td><td>0.2.0</td></tr><tr><td>foyer-storage-bench</td><td>0.2.0</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-36">Changes<a href="#changes-36" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<ul>
+<li>Introduce the associated type <code>Cursor</code> for trait <code>Key</code> and <code>Value</code> to reduce unnecessary buffer copy if possible.</li>
+<li>Remove the ring buffer and continuum tracker for they are no longer needed.</li>
+<li>Update the configuration of the storage engine and the benchmark tool.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2023-11-29">2023-11-29<a href="#2023-11-29" class="hash-link" aria-label="Direct link to 2023-11-29" title="Direct link to 2023-11-29">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-37">Releases<a href="#releases-37" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer</td><td>0.2.0</td></tr><tr><td>foyer-common</td><td>0.1.0</td></tr><tr><td>foyer-intrusive</td><td>0.1.0</td></tr><tr><td>foyer-storage</td><td>0.1.0</td></tr><tr><td>foyer-storage-bench</td><td>0.1.0</td></tr><tr><td>foyer-workspace-hack</td><td>0.1.0</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-37">Changes<a href="#changes-37" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<p>The first version that can be used as file cache.</p>
+<p>The write model and the design of storage engine has been switched from CacheLib navy version to the ring buffer version (which was highly inspired by MySQL 8.0 link_buf).</p>
+<p>Introduces <code>Store</code>, <code>RuntimeStore</code>, <code>LazyStore</code> to simplify usage. In most cases, <code>RuntimeStore</code> is preferred to use a dedicated tokio runtime to serve <strong>foyer</strong> to avoid the influence to the user&#x27;s runtime. If lazy-load is needed, use <code>RuntimeLazyStore</code> instead.</p>
+<p>The implementation of <strong>foyer</strong> is separated into multiple crates. But importing <code>foyer</code> is enough for it re-exports the crates that <strong>foyer</strong>&#x27;s user needs.</p>
+<p>Brief description about the subcrates:</p>
+<ul>
+<li>foyer-common: Provide basic data structures and algorithms.</li>
+<li>foyer-intrusive: Provide intrusive containers for implementing eviction lists and collections. Intrusive data structures provide the ability to implement low-cost multi-index data structures, which will be used for the memory cache in future.</li>
+<li>foyer-storage: Provide the file cache storage engine and wrappers to simplify the code.</li>
+<li>foyer-storage-bench: Runnable benchmark tool for the file cache storage engine.</li>
+<li>foyer-workspace-hack: Generated by <a href="https://crates.io/crates/hakari" target="_blank" rel="noopener noreferrer">hakari</a> to prevent building each crate from triggering building from scratch.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2023-05-12">2023-05-12<a href="#2023-05-12" class="hash-link" aria-label="Direct link to 2023-05-12" title="Direct link to 2023-05-12">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="releases-38">Releases<a href="#releases-38" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>crate</th><th>version</th></tr></thead><tbody><tr><td>foyer</td><td>0.1.0</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-38">Changes<a href="#changes-38" class="hash-link" aria-label="Direct link to Changes" title="Direct link to Changes">​</a></h3>
+<p>Initial version with just basic interfaces.</p></div><footer class="docusaurus-mt-lg"><div class="row margin-top--sm theme-blog-footer-edit-meta-row"><div class="col"><b>Tags:</b><ul class="tags_jXut padding--none margin-left--sm"><li class="tag_QGVx"><a title="Changelog for foyer" class="tag_zVej tagRegular_sFm0" href="/blog/tags/changelog">Changelog</a></li></ul></div></div><div class="row margin-top--sm theme-blog-footer-edit-meta-row"><div class="col"><a href="https://github.com/foyer-rs/website/tree/main/blog/remote/CHANGELOG.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Blog post page navigation"><a class="pagination-nav__link pagination-nav__link--next" href="/blog/welcome"><div class="pagination-nav__sublabel">Older post</div><div class="pagination-nav__label">Welcome</div></a></nav></main><div class="col col--2"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#2024-09-12" class="table-of-contents__link toc-highlight">2024-09-12</a><ul><li><a href="#releases" class="table-of-contents__link toc-highlight">Releases</a></li><li><a href="#changes" class="table-of-contents__link toc-highlight">Changes</a></li></ul></li><li><a href="#2024-08-31" class="table-of-contents__link toc-highlight">2024-08-31</a><ul><li><a href="#releases-1" class="table-of-contents__link toc-highlight">Releases</a></li><li><a href="#changes-1" class="table-of-contents__link toc-highlight">Changes</a></li></ul></li><li><a href="#2024-08-21" class="table-of-contents__link toc-highlight">2024-08-21</a><ul><li><a href="#releases-2" class="table-of-contents__link toc-highlight">Releases</a></li><li><a href="#changes-2" class="table-of-contents__link toc-highlight">Changes</a></li></ul></li><li><a href="#2024-08-15" class="table-of-contents__link toc-highlight">2024-08-15</a><ul><li><a href="#releases-3" class="table-of-contents__link toc-highlight">Releases</a></li><li><a href="#changes-3" class="table-of-contents__link toc-highlight">Changes</a></li></ul></li><li><a href="#2024-08-14" class="table-of-contents__link toc-highlight">2024-08-14</a><ul><li><a href="#releases-4" class="table-of-contents__link toc-highlight">Releases</a></li><li><a href="#changes-4" class="table-of-contents__link toc-highlight">Changes</a></li></ul></li><li><a href="#2024-07-08" class="table-of-contents__link toc-highlight">2024-07-08</a><ul><li><a href="#releases-5" class="table-of-contents__link toc-highlight">Releases</a></li><li><a href="#changes-5" class="table-of-contents__link toc-highlight">Changes</a></li></ul></li><li><a href="#2024-07-02" class="table-of-contents__link toc-highlight">2024-07-02</a><ul><li><a href="#releases-6" class="table-of-contents__link toc-highlight">Releases</a></li><li><a href="#changes-6" class="table-of-contents__link toc-highlight">Changes</a></li></ul></li><li><a href="#2024-06-14" class="table-of-contents__link toc-highlight">2024-06-14</a><ul><li><a href="#releases-7" class="table-of-contents__link toc-highlight">Releases</a></li><li><a href="#changes-7" class="table-of-contents__link toc-highlight">Changes</a></li></ul></li><li><a href="#2024-06-05" class="table-of-contents__link toc-highlight">2024-06-05</a><ul><li><a href="#releases-8" class="table-of-contents__link toc-highlight">Releases</a></li><li><a href="#changes-8" class="table-of-contents__link toc-highlight">Changes</a></li></ul></li><li><a href="#2024-06-04" class="table-of-contents__link toc-highlight">2024-06-04</a><ul><li><a href="#releases-9" class="table-of-contents__link toc-highlight">Releases</a></li><li><a href="#changes-9" class="table-of-contents__link toc-highlight">Changes</a></li></ul></li><li><a href="#2024-06-03" class="table-of-contents__link toc-highlight">2024-06-03</a><ul><li><a href="#releases-10" class="table-of-contents__link toc-highlight">Releases</a></li><li><a href="#changes-10" class="table-of-contents__link toc-highlight">Changes</a></li></ul></li><li><a href="#2024-05-31" class="table-of-contents__link toc-highlight">2024-05-31</a><ul><li><a href="#releases-11" class="table-of-contents__link toc-highlight">Releases</a></li><li><a href="#changes-11" class="table-of-contents__link toc-highlight">Changes</a></li></ul></li><li><a href="#2024-05-27" class="table-of-contents__link toc-highlight">2024-05-27</a><ul><li><a href="#releases-12" class="table-of-contents__link toc-highlight">Releases</a></li><li><a href="#changes-12" class="table-of-contents__link toc-highlight">Changes</a></li></ul></li><li><a href="#2024-04-28" class="table-of-contents__link toc-highlight">2024-04-28</a><ul><li><a href="#releases-13" class="table-of-contents__link toc-highlight">Releases</a></li><li><a href="#changes-13" class="table-of-contents__link toc-highlight">Changes</a></li></ul></li><li><a href="#2024-04-28-1" class="table-of-contents__link toc-highlight">2024-04-28</a><ul><li><a href="#releases-14" class="table-of-contents__link toc-highlight">Releases</a></li><li><a href="#changes-14" class="table-of-contents__link toc-highlight">Changes</a></li></ul></li><li><a href="#2024-04-27" class="table-of-contents__link toc-highlight">2024-04-27</a><ul><li><a href="#releases-15" class="table-of-contents__link toc-highlight">Releases</a></li><li><a href="#changes-15" class="table-of-contents__link toc-highlight">Changes</a></li></ul></li><li><a href="#2024-04-27-1" class="table-of-contents__link toc-highlight">2024-04-27</a><ul><li><a href="#releases-16" class="table-of-contents__link toc-highlight">Releases</a></li><li><a href="#changes-16" class="table-of-contents__link toc-highlight">Changes</a></li></ul></li><li><a href="#2024-04-26" class="table-of-contents__link toc-highlight">2024-04-26</a><ul><li><a href="#releases-17" class="table-of-contents__link toc-highlight">Releases</a></li><li><a href="#changes-17" class="table-of-contents__link toc-highlight">Changes</a></li></ul></li><li><a href="#2024-04-26-1" class="table-of-contents__link toc-highlight">2024-04-26</a><ul><li><a href="#releases-18" class="table-of-contents__link toc-highlight">Releases</a></li><li><a href="#changes-18" class="table-of-contents__link toc-highlight">Changes</a></li></ul></li><li><a href="#2024-04-26-2" class="table-of-contents__link toc-highlight">2024-04-26</a><ul><li><a href="#releases-19" class="table-of-contents__link toc-highlight">Releases</a></li><li><a href="#changes-19" class="table-of-contents__link toc-highlight">Changes</a></li></ul></li><li><a href="#2024-04-25" class="table-of-contents__link toc-highlight">2024-04-25</a><ul><li><a href="#releases-20" class="table-of-contents__link toc-highlight">Releases</a></li><li><a href="#changes-20" class="table-of-contents__link toc-highlight">Changes</a></li></ul></li><li><a href="#2024-04-25-1" class="table-of-contents__link toc-highlight">2024-04-25</a><ul><li><a href="#releases-21" class="table-of-contents__link toc-highlight">Releases</a></li><li><a href="#changes-21" class="table-of-contents__link toc-highlight">Changes</a></li></ul></li><li><a href="#2024-04-24" class="table-of-contents__link toc-highlight">2024-04-24</a><ul><li><a href="#releases-22" class="table-of-contents__link toc-highlight">Releases</a></li><li><a href="#changes-22" class="table-of-contents__link toc-highlight">Changes</a></li></ul></li><li><a href="#2024-04-24-1" class="table-of-contents__link toc-highlight">2024-04-24</a><ul><li><a href="#releases-23" class="table-of-contents__link toc-highlight">Releases</a></li><li><a href="#changes-23" class="table-of-contents__link toc-highlight">Changes</a></li></ul></li><li><a href="#2024-04-23" class="table-of-contents__link toc-highlight">2024-04-23</a><ul><li><a href="#releases-24" class="table-of-contents__link toc-highlight">Releases</a></li><li><a href="#changes-24" class="table-of-contents__link toc-highlight">Changes</a></li></ul></li><li><a href="#2024-04-11" class="table-of-contents__link toc-highlight">2024-04-11</a><ul><li><a href="#releases-25" class="table-of-contents__link toc-highlight">Releases</a></li><li><a href="#changes-25" class="table-of-contents__link toc-highlight">Changes</a></li></ul></li><li><a href="#2024-04-09" class="table-of-contents__link toc-highlight">2024-04-09</a><ul><li><a href="#releases-26" class="table-of-contents__link toc-highlight">Releases</a></li><li><a href="#changes-26" class="table-of-contents__link toc-highlight">Changes</a></li></ul></li><li><a href="#2024-04-08" class="table-of-contents__link toc-highlight">2024-04-08</a><ul><li><a href="#releases-27" class="table-of-contents__link toc-highlight">Releases</a></li><li><a href="#changes-27" class="table-of-contents__link toc-highlight">Changes</a></li></ul></li><li><a href="#2024-03-21" class="table-of-contents__link toc-highlight">2024-03-21</a><ul><li><a href="#releases-28" class="table-of-contents__link toc-highlight">Releases</a></li><li><a href="#changes-28" class="table-of-contents__link toc-highlight">Changes</a></li></ul></li><li><a href="#2024-03-14" class="table-of-contents__link toc-highlight">2024-03-14</a><ul><li><a href="#releases-29" class="table-of-contents__link toc-highlight">Releases</a></li><li><a href="#changes-29" class="table-of-contents__link toc-highlight">Changes</a></li></ul></li><li><a href="#2024-03-13" class="table-of-contents__link toc-highlight">2024-03-13</a><ul><li><a href="#releases-30" class="table-of-contents__link toc-highlight">Releases</a></li><li><a href="#changes-30" class="table-of-contents__link toc-highlight">Changes</a></li></ul></li><li><a href="#2024-03-12" class="table-of-contents__link toc-highlight">2024-03-12</a><ul><li><a href="#releases-31" class="table-of-contents__link toc-highlight">Releases</a></li><li><a href="#changes-31" class="table-of-contents__link toc-highlight">Changes</a></li></ul></li><li><a href="#2023-12-28" class="table-of-contents__link toc-highlight">2023-12-28</a><ul><li><a href="#releases-32" class="table-of-contents__link toc-highlight">Releases</a></li><li><a href="#changes-32" class="table-of-contents__link toc-highlight">Changes</a></li></ul></li><li><a href="#2023-12-22" class="table-of-contents__link toc-highlight">2023-12-22</a><ul><li><a href="#releases-33" class="table-of-contents__link toc-highlight">Releases</a></li><li><a href="#changes-33" class="table-of-contents__link toc-highlight">Changes</a></li></ul></li><li><a href="#2023-12-20" class="table-of-contents__link toc-highlight">2023-12-20</a><ul><li><a href="#releases-34" class="table-of-contents__link toc-highlight">Releases</a></li><li><a href="#changes-34" class="table-of-contents__link toc-highlight">Changes</a></li></ul></li><li><a href="#2023-12-18" class="table-of-contents__link toc-highlight">2023-12-18</a><ul><li><a href="#releases-35" class="table-of-contents__link toc-highlight">Releases</a></li><li><a href="#changes-35" class="table-of-contents__link toc-highlight">Changes</a></li></ul></li><li><a href="#2023-12-18-1" class="table-of-contents__link toc-highlight">2023-12-18</a><ul><li><a href="#releases-36" class="table-of-contents__link toc-highlight">Releases</a></li><li><a href="#changes-36" class="table-of-contents__link toc-highlight">Changes</a></li></ul></li><li><a href="#2023-11-29" class="table-of-contents__link toc-highlight">2023-11-29</a><ul><li><a href="#releases-37" class="table-of-contents__link toc-highlight">Releases</a></li><li><a href="#changes-37" class="table-of-contents__link toc-highlight">Changes</a></li></ul></li><li><a href="#2023-05-12" class="table-of-contents__link toc-highlight">2023-05-12</a><ul><li><a href="#releases-38" class="table-of-contents__link toc-highlight">Releases</a></li><li><a href="#changes-38" class="table-of-contents__link toc-highlight">Changes</a></li></ul></li></ul></div></div></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs/category/tutorial">Tutorial</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/category/topics">Topics</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/category/showcase">Showcase</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/category/design">Design</a></li></ul></div><div class="col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/foyer-rs/foyer/discussions" target="_blank" rel="noopener noreferrer" class="footer__link-item">Github Discussions<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div><div class="col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/blog">Blog</a></li><li class="footer__item"><a href="https://github.com/foyer-rs/foyer" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://docs.rs/foyer" target="_blank" rel="noopener noreferrer" class="footer__link-item">Docs.rs<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://crates.io/crates/foyer" target="_blank" rel="noopener noreferrer" class="footer__link-item">crates.io<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2024 foyer. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>
