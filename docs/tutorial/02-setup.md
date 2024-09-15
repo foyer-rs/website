@@ -1,13 +1,4 @@
----
-sidebar_position: 1
-title: Overview
----
-
-<div style="text-align: center;">
-  <img src="/img/logo/slogan.min.svg" style="width: 280px; margin: 1rem 0;"/>
-</div>
-
-# Overview
+# Setup
 
 ***foyer***, just as its slogan, is a hybrid cache library for the Rust programming language. It provides a unified abstraction to utilize and manage cache on both memory and disk. 
 
