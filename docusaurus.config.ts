@@ -108,7 +108,19 @@ const config: Config = {
           items: [
             {
               label: 'Tutorial',
-              to: '/docs/intro',
+              to: '/docs/category/tutorial',
+            },
+            {
+              label: 'Topics',
+              to: '/docs/category/topics',
+            },
+            {
+              label: 'Showcase',
+              to: '/docs/category/showcase',
+            },
+            {
+              label: 'Design',
+              to: '/docs/category/design',
             },
           ],
         },
