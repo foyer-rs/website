@@ -1,6 +1,5 @@
 {
-  "label": "Tutorial",
-  "position": 1,
+  "label": "Topic",
   "link": {
     "type": "generated-index"
   }
