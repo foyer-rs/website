@@ -18,7 +18,6 @@ A hybrid cache is a caching system that utilizes both memory and disk storage si
   
 </div>
 
-
 It is commonly used to extend the insufficient memory cache for the system uses Object Store Service (OSS, e.g. AWS S3) as its primary data storage[^oss-dia] to **improve performance** and **reduce costs**[^risingwave].
 
 ## Why we need a hybrid cache?
@@ -27,7 +26,6 @@ More and more systems are using OSS as their primary data storage. OSS has many 
 
 However, there are also downsides with OSS. For example, the latency is high and uncontrollable, and its price increases with each accesses. The downsides will be further amplified in a large working set because of more data exchange between cache and OSS.
 
-
 <div style="text-align: center;">
 
   ![exchange](./assets/exchange.svg)
@@ -35,7 +33,6 @@ However, there are also downsides with OSS. For example, the latency is high and
 </div>
 
 With a hybrid cache, the ability to cache the working set can be extended from memory only to memory and disk. This can reduce data exchange between cache and OSS, thereby improving performance and reducing costs.
-
 
 <div style="text-align: center;">
 
