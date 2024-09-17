@@ -119,8 +119,8 @@ const config: Config = {
               to: '/docs/category/topic',
             },
             {
-              label: 'Showcase',
-              to: '/docs/category/showcase',
+              label: 'Case Study',
+              to: '/docs/category/case-study',
             },
             {
               label: 'Design',
