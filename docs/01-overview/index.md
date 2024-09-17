@@ -69,7 +69,7 @@ For the needs as an in-memory only cache, ***foyer*** also provides compatible i
 
 - Learn how to use ***foyer*** in your project, goto [Tutorial](/docs/category/tutorial).
 - Learn how to solve various challenging situations with ***foyer***, goto [Topic](/docs/category/topic).
-- Learn how other projects use ***foyer***, goto [Showcase](/docs/category/showcase).
+- Learn how other projects use ***foyer***, goto [Case Study](/docs/category/case-study).
 - Learn the design of ***foyer***, goto [Design](/docs/category/design).
 
 ## Acknowledgement
@@ -80,7 +80,7 @@ Thank you for your efforts! 🥰
 
 [^oss-dia]: Systems using OSS as its primary data storage: [RisingWave](https://github.com/risingwavelabs/risingwave), [Chroma Cloud](https://github.com/chroma-core/chroma), [SlateDB](https://github.com/slatedb/slatedb), etc.
 
-[^risingwave]: How streaming database RisingWave use foyer to improve performance and reduce costs: [Showcase - RisingWave](/docs/showcase/risingwave).
+[^risingwave]: How streaming database RisingWave use foyer to improve performance and reduce costs: [Case Study - RisingWave](/docs/case-study/risingwave).
 
 [^cachelib]: [FaceBook/CacheLib](https://github.com/facebook/cachelib).
 

@@ -28,7 +28,7 @@ foyer = { version = "0.11", features = ["nightly"] }
 
 ### 2.1 Build with a builder
 
-`Cache`[^cache] can be built from `CacheBuilder`[^cache-builder]. For the default configuration, only `capacity` is required.
+`Cache`[^cache] can be built via `CacheBuilder`[^cache-builder]. For the default configuration, only `capacity` is required.
 
 ```rust
 use foyer::{Cache, CacheBuilder};
@@ -50,7 +50,7 @@ let cache: Cache<String, String> = CacheBuilder::new(10000)
   .build();
 ```
 
-With `with_weighter`[^with-weighter], you can customize how `Cache` counts its usage. In the case below, the usage is counted by the total character length of the entry.
+With `with_weighter()`[^with-weighter], you can customize how `Cache` counts its usage. In the case below, the usage is counted by the total character length of the entry.
 
 The weighter can be implemented to count anything. Count, length, memory usage, or anything you want.
 
@@ -62,7 +62,7 @@ There are two ways to mitigate the hot shards.
 
 1. Scale the shards
 
-Scaling the shard may reduce the possibility to create hot shards. You can scale the shards to a higher number with `with_shards`.[^with-shards]
+Scaling the shard may reduce the possibility to create hot shards. You can scale the shards to a higher number with `with_shards()`.[^with-shards]
 
 ```rust
 let cache: Cache<String, String> = CacheBuilder::new(1024)
@@ -72,7 +72,7 @@ let cache: Cache<String, String> = CacheBuilder::new(1024)
 
 2. Use a customized hasher
 
-By default, ***foyer*** uses `ahash`[^ahash] as the hasher to determine which shard a key belongs to. You can use your own hasher with `with_hash_builder`.[^with-hash-builder]
+By default, ***foyer*** uses `ahash`[^ahash] as the hasher to determine which shard a key belongs to. You can use your own hasher with `with_hash_builder()`.[^with-hash-builder]
 
 ```rust
 let cache: Cache<String, String> = CacheBuilder::new(1024)
