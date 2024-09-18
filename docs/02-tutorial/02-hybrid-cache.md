@@ -42,7 +42,7 @@ For more details, please refer to the API document.[^hybrid-cache-builder].
 
 :::tip dynamic tail-based tracing config
 
-The tracing config is used for configure the dynamic tail-based tracing. It can also be modified later. To learn more, see [Tutorial - Tail-based Tracing](/docs/tutorial/tail-based-tracing).
+The tracing config is used for configure the dynamic tail-based tracing. It can also be modified later. To learn more, see [Tutorial - Setup Monitor System](/docs/tutorial/monitor).
 
 :::
 
@@ -78,6 +78,76 @@ RisingWave[^risingwave] supports caching the LSM-tree meta and blocks in both hy
 
 To specify a device for the hybrid cache, just call `with_device_config()`[^with-device-config] and provide the device config.
 
+Currently, the storage of the hybrid cache supports 2 kinds of devices:
+
+1. `DirectFsDevice`[^direct-fs-device]: Setup within a directory of a file system with direct I/O[^direct-io] files. 
+2. `DirectFileDevice`[^direct-file-device]: Setup with a raw block device (block file) or a direct I/O[^direct-io] file in a file system. 
+
+Determine which kind of device to use depends on your needs. If you want to utilize the spare space of an existing file system, `DirectFsDevice` is all you need. If you want to overcome the overhead of the file system, use `DirectFileDevice` on a raw block device. And **NEVER** use a `DirectFileDevice` within a file system. The `inode` latch will make the overhead of the file system layer worse.
+
+:::tip
+
+For more details about the overhead of the file system layer, see [Topic - Overhead of the File System Layer](/docs/topic/overhead-of-the-file-system-layer)
+
+:::
+
+Let's take `DirectFsDevice` as an example:
+
+```rust
+let hybrid: HybridCache<u64, String> = HybridCacheBuilder::new()
+    .with_name("foyer")
+    .memory(1024)
+    .storage()
+    .with_device_config(DirectFsDeviceOptionsBuilder::new("/data/foyer").build())
+    .build()
+    .await
+    .unwrap();
+```
+
+This example uses directory `/data/foyer` to store disk cache data using a device options builder. With the default configuration, ***foyer*** will take 80% of the current free space as the disk cache capacity. You can also specify the disk cache capacity and per file size with the builder.
+
+For more details, please refer to the API document.[^direct-fs-device-options-builder] [^direct-file-device-options-builder]
+
+#### 2.3.3 Restrict the throughput
+
+The bandwidth of the disk is much lower than the bandwidth of the memory. To avoid excessive use of the disk bandwidth, it is **HIGHLY RECOMMENDED** to setup the admission picker with a rate limiter.
+
+```rust
+let hybrid: HybridCache<u64, String> = HybridCacheBuilder::new()
+    .with_name("foyer")
+    .memory(1024)
+    .storage()
+    .with_device_config(DirectFsDeviceOptionsBuilder::new("/data/foyer").build())
+    .with_admission_picker(Arc::new(RateLimitPicker::new(100 * 1024 * 1024)))
+    .build()
+    .await
+    .unwrap();
+```
+
+You can also customize the admission picker with your own admission policy. For more details, please refer to the API document.[^admission-picker]
+
+:::tip admission picker
+
+Admission means allowing an entry to be inserted into the disk cache. And a admission picker can be used to customize the admission policy.
+
+For more details, please refer to [Design - Architecture](/docs/design/architecture).
+
+:::
+
+#### 2.3.4 Achieve better performance
+
+The hybrid cache builder also provides a lot of detailed arguments for tuning.
+
+For example:
+
+- `with_indexer_shards()` can be used for mitigating hot shards of the indexer.
+- `with_flushers()`, `with_reclaimers()` and `with_recover_concurrency()` can be used to tune the concurrency of the inner components.
+- `with_runtime_config()` can be used to enable the dedicated runtime or further runtime splitting.
+
+Tuning the optimized parameters requires an understanding of ***foyer*** interior design and benchmarking with the real workload. For more details, please refer to [Design - Architecture](/docs/design/architecture).
+
+## 3. `HybridCache` Usage
+
 ***TBC ... ...***
 
 [^hybrid-cache]: https://docs.rs/foyer/latest/foyer/struct.HybridCache.html
@@ -88,7 +158,6 @@ To specify a device for the hybrid cache, just call `with_device_config()`[^with
 
 [^storage]: https://docs.rs/foyer/latest/foyer/struct.HybridCacheBuilderPhaseMemory.html#method.storage
 
-
 [^cache-builder]: https://docs.rs/foyer/latest/foyer/struct.CacheBuilder.html
 
 [^cache]: https://docs.rs/foyer/latest/foyer/enum.Cache.html
@@ -96,3 +165,15 @@ To specify a device for the hybrid cache, just call `with_device_config()`[^with
 [^risingwave]: https://github.com/risingwavelabs/risingwave
 
 [^with-device-config]: https://docs.rs/foyer/latest/foyer/struct.HybridCacheBuilderPhaseStorage.html#method.with_device_config
+
+[^direct-fs-device]: https://docs.rs/foyer/latest/foyer/struct.DirectFsDevice.html
+
+[^direct-file-device]: https://docs.rs/foyer/latest/foyer/struct.DirectFileDevice.html
+
+[^direct-io]: https://linux.die.net/HOWTO/SCSI-Generic-HOWTO/dio.html
+
+[^direct-fs-device-options-builder]: https://docs.rs/foyer/latest/foyer/struct.DirectFsDeviceOptionsBuilder.html
+
+[^direct-file-device-options-builder]: https://docs.rs/foyer/latest/foyer/struct.DirectFileDeviceOptionsBuilder.html
+
+[^admission-picker]: https://docs.rs/foyer/latest/foyer/trait.AdmissionPicker.html

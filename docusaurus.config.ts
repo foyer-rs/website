@@ -170,7 +170,7 @@ const config: Config = {
   markdown: {
     format: 'detect',
     remarkRehypeOptions: {
-      footnoteBackLabel: 'References',
+      footnoteLabel: 'References',
     }
   },
   
