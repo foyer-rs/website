@@ -148,7 +148,36 @@ Tuning the optimized parameters requires an understanding of ***foyer*** interio
 
 ## 3. `HybridCache` Usage
 
-***TBC ... ...***
+`HybridCache` provides similar interfaces to `Cache` and caches from any other cache library. The difference is that `HybridCache` uses `async` for methods if necessary, while also introducing some advanced methods. There is a brief:
+
+- `fn insert()`: Insert cache entry to the hybrid cache.
+- `fn remove()`: Remove a cached entry with the given key from the hybrid cache.
+- `fn contains()`: Check if the hybrid cache contains a cached entry that has the given key with false-positive results.
+- `async fn get()`: Get cached entry with the given key from the hybrid cache.
+- `async fn obtain()`: Get cached entry with the given key from the hybrid cache with requests deduplication on the same key.
+- `async fn fetch()`: Fetch and insert a cache entry with the given key and method if there is a cache miss with requests deduplication on the same key.
+
+:::tip
+
+The full method list and detailed document can be found in the API document.[^hybrid-cache]
+
+:::
+
+The insertion part looks no difference from an in-memory cache. The lookup part, however, are all asynchronous.
+
+For most cases, `fetch()` is always recommended for it performs request deduplication and auto cache filling on cache miss. `fetch()` receives a key and the asynchronous fetch method to get the value from a remote storage on cache miss.
+
+```rust
+let entry = hybrid
+    .fetch(42, || async move {
+        tokio::time::sleep(std::time::Duration::from_secs(1)).await;
+        Ok("The answer to life universe and everything.".to_string())
+    })
+    .await
+    .unwrap();
+```
+
+The hybrid cache also provides a `writer()` interface for advanced usage, such as insert disk cache only, force insertion, etc. For details, please refer to the API document.[^hybrid-cache-writer]
 
 [^hybrid-cache]: https://docs.rs/foyer/latest/foyer/struct.HybridCache.html
 
@@ -177,3 +206,5 @@ Tuning the optimized parameters requires an understanding of ***foyer*** interio
 [^direct-file-device-options-builder]: https://docs.rs/foyer/latest/foyer/struct.DirectFileDeviceOptionsBuilder.html
 
 [^admission-picker]: https://docs.rs/foyer/latest/foyer/trait.AdmissionPicker.html
+
+[^hybrid-cache-writer]: https://docs.rs/foyer/latest/foyer/struct.HybridCacheWriter.html

@@ -86,7 +86,7 @@ Please refer to the API document.[^cache-builder]
 
 ## 3. Use `Cache` as any other cache library
 
-`Cache` provides familiar interface as any other cache library.
+`Cache` provides similar interfaces to caches from any other cache library.
 
 Here is an example.
 
