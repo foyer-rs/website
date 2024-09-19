@@ -165,6 +165,13 @@ const config: Config = {
       theme: prismThemes.dracula,
       darkTheme: prismThemes.dracula,
     },
+    algolia: {
+      // The application ID provided by Algolia
+      appId: 'DLHM9F785Y',
+      // Public API key: it is safe to commit it
+      apiKey: '23d370eea26a022c898a31603cfc35c9',
+      indexName: 'foyer',
+    }
   } satisfies Preset.ThemeConfig,
 
   markdown: {
@@ -173,17 +180,17 @@ const config: Config = {
       footnoteLabel: 'References',
     }
   },
-  
+
   plugins: [
     [
       // https://github.com/rdilweb/docusaurus-plugin-remote-content
       "docusaurus-plugin-remote-content",
-          {
-              name: "remote",
-              sourceBaseUrl: "https://raw.githubusercontent.com/foyer-rs/foyer/main/",
-              outDir: "blog/remote",
-              documents: ["CHANGELOG.md"],
-          },
+      {
+        name: "remote",
+        sourceBaseUrl: "https://raw.githubusercontent.com/foyer-rs/foyer/main/",
+        outDir: "blog/remote",
+        documents: ["CHANGELOG.md"],
+      },
     ],
   ]
 };
