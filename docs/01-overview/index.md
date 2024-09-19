@@ -4,6 +4,14 @@
   <img src="/img/logo/slogan.min.svg" style="width: 280px;" />
 </p>
 
+<div style="text-align: center;">
+
+![Website](https://img.shields.io/website?url=https%3A%2F%2Ffoyer.rs&up_message=foyer.rs&style=for-the-badge&logo=rust&labelColor=555555)
+![Crates.io Version](https://img.shields.io/crates/v/foyer?style=for-the-badge&logo=docs.rs&labelColor=555555)
+![docs.rs](https://img.shields.io/docsrs/foyer?style=for-the-badge&logo=docs.rs&labelColor=555555)
+
+</div>
+
 ## What is foyer?
 
 ***foyer***, just as its slogan, is a hybrid cache library for the Rust programming language. 🦀
