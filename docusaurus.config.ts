@@ -42,6 +42,7 @@ const config: Config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/foyer-rs/website/tree/main/',
+          includeCurrentVersion: false,
         },
         blog: {
           showReadingTime: true,
@@ -83,6 +84,11 @@ const config: Config = {
         },
         { to: '/blog', label: 'Blog', position: 'left' },
         { to: '/blog/remote/CHANGELOG', label: 'Changelog', position: 'left' },
+        {
+          type: 'docsVersionDropdown',
+          docsPluginId: "default",
+          position: 'right',
+        },
         {
           href: 'https://crates.io/crates/foyer',
           label: 'crates.io',
@@ -161,6 +167,7 @@ const config: Config = {
       ],
       copyright: `Copyright © ${new Date().getFullYear()} foyer. Built with Docusaurus.`,
     },
+    tableOfContents: { minHeadingLevel: 3, maxHeadingLevel: 5 },
     prism: {
       theme: prismThemes.dracula,
       darkTheme: prismThemes.dracula,

@@ -11,13 +11,13 @@ Let get through it!
 Add this line to the `[dependencies]` section of your project's `Cargo.toml`.
 
 ```toml
-foyer = "0.12"
+foyer = "0.11"
 ```
 
 If you are using a nightly version of the rust toolchain, the `nightly` feature is needed.
 
 ```toml
-foyer = { version = "0.12", features = ["nightly"] }
+foyer = { version = "0.11", features = ["nightly"] }
 ```
 
 ## 2. Build a `HybridCache`
@@ -58,31 +58,13 @@ The default configuration count the usage by entry count. If you needs to change
 
 ### 2.3 Build disk cache
 
-After setting up the in-memory cache, you can move on to setup the disk cache.
+#### 2.3.1 Run on in-memory cache compatible mode
 
-#### 2.3.1 Choose a proper engine
+After setting up the in-memory cache, you can call `storage()` to move on to setup the disk cache.
 
-To setup the disk cache, you need to choose a proper engine for your workload first. Currently, ***foyer*** support 3 kinds of engines:
-
-- `Engine::Large`: For cache entries larger than 2 KiB. Friendly to HDD/SSD while minimizing memory usage for indexing.
-- `Engine::Small`: For cache entries smaller than 2 KiB. A set-associated cache that does not use memory for indexing.
-- `Engine::Mixed(ratio)`: For cache entries in all sizes. Mixed `Engine::Large` and `Engine::Small`. Use `ratio` to control the proportion of the capacity of `Engine::Small`. Introducing a little overhead compared to using `Engine::Large` and `Engine::Small` separately.
-
-For more details about the engines, please refer to [Design - Architecture](/docs/design/architecture).
-
-:::warning
-
-`Engine::Small` and `Engine::Mixed` are preview version and have **NOT** undergone sufficient testing in production environments. Please use them with caution in production systems.
-
-If you have such needs, you can contact me via Github. We can work together to improve the system for production and make ***foyer*** better! 🥰
-
-:::
-
-#### 2.3.2 Setup shared options
-
-Some options are shared between engines, you can setup shared options before setting up engine-specific options.
-
-##### 2.3.2.1 Setup device options
+```rust
+let mut builder = HybridCacheBuilder::new().memory(1024).storage();
+```
 
 By default, the hybrid cache will **NOT** include a disk cache unless you specify a device. The hybrid cache will run on a in-memory cache compatible mode with the default configuration. All lookups to the disk will return a miss. It is useful if you want to support both in-memory cache or the hybrid cache based on your project's configuration or for debugging.
 
@@ -92,7 +74,9 @@ RisingWave[^risingwave] supports caching the LSM-tree meta and blocks in both hy
 
 :::
 
-To enable the hybrid cache mode, a device needs to be specified by calling `with_device_options()`[^with-device-options] and providing the device options.
+#### 2.3.2 Run on hybrid cache mode with a device
+
+To specify a device for the hybrid cache, just call `with_device_config()`[^with-device-config] and provide the device config.
 
 Currently, the storage of the hybrid cache supports 2 kinds of devices:
 
@@ -113,8 +97,8 @@ Let's take `DirectFsDevice` as an example:
 let hybrid: HybridCache<u64, String> = HybridCacheBuilder::new()
     .with_name("foyer")
     .memory(1024)
-    .storage(Engine::Large)
-    .with_device_options(DirectFsDeviceOptions::new("/data/foyer"))
+    .storage()
+    .with_device_config(DirectFsDeviceOptionsBuilder::new("/data/foyer").build())
     .build()
     .await
     .unwrap();
@@ -122,9 +106,9 @@ let hybrid: HybridCache<u64, String> = HybridCacheBuilder::new()
 
 This example uses directory `/data/foyer` to store disk cache data using a device options builder. With the default configuration, ***foyer*** will take 80% of the current free space as the disk cache capacity. You can also specify the disk cache capacity and per file size with the builder.
 
-For more details, please refer to the API document.[^direct-fs-device-options] [^direct-file-device-options]
+For more details, please refer to the API document.[^direct-fs-device-options-builder] [^direct-file-device-options-builder]
 
-##### 2.3.2.2 Restrict the throughput
+#### 2.3.3 Restrict the throughput
 
 The bandwidth of the disk is much lower than the bandwidth of the memory. To avoid excessive use of the disk bandwidth, it is **HIGHLY RECOMMENDED** to setup the admission picker with a rate limiter.
 
@@ -132,8 +116,9 @@ The bandwidth of the disk is much lower than the bandwidth of the memory. To avo
 let hybrid: HybridCache<u64, String> = HybridCacheBuilder::new()
     .with_name("foyer")
     .memory(1024)
-    .storage(Engine::Large)
-    .with_device_options(DirectFsDeviceOptions::new("/data/foyer"))
+    .storage()
+    .with_device_config(DirectFsDeviceOptionsBuilder::new("/data/foyer").build())
+    .with_admission_picker(Arc::new(RateLimitPicker::new(100 * 1024 * 1024)))
     .build()
     .await
     .unwrap();
@@ -149,32 +134,17 @@ For more details, please refer to [Design - Architecture](/docs/design/architect
 
 :::
 
-##### 2.3.2.3 Other shared options
+#### 2.3.4 Achieve better performance
 
-There are also other shared options for tuning or other purposes.
+The hybrid cache builder also provides a lot of detailed arguments for tuning.
 
-- `with_runtime_options()`: Set the runtime options to enable and setup the dedicated runtime.
-- `with_compression()`: Set the compression algorithm for serialization and deserialization.
-- `with_recover_mode()`: Set the recover mode.
-- `with_flush()`: Set if trigger a flush operation after writing the disk.
-- ...
+For example:
 
-For more details, please refer to the API document.[^hybrid-cache-builder]
+- `with_indexer_shards()` can be used for mitigating hot shards of the indexer.
+- `with_flushers()`, `with_reclaimers()` and `with_recover_concurrency()` can be used to tune the concurrency of the inner components.
+- `with_runtime_config()` can be used to enable the dedicated runtime or further runtime splitting.
 
-:::tip
-
-Tuning the optimized parameters requires an understanding of ***foyer*** interior design and benchmarking with the real workload. For more details, please refer to [Topic - Tuning](/docs/topic/tuning) and [Design - Architecture](/docs/design/architecture).
-
-:::
-
-#### 2.3.3 Setup engine-specific options
-
-Each engine also has its specific options for tuning or other purposes.
-
-- `with_large_object_disk_cache_options()`[^with-large-object-disk-cache-options]: Set the options for the large object disk cache.
-- `with_small_object_disk_cache_options()`[^with-small-object-disk-cache-options]: Set the options for the small object disk cache.
-
-For more details, please refer to the API document [^large-engine-options] [^small-engine-options].
+Tuning the optimized parameters requires an understanding of ***foyer*** interior design and benchmarking with the real workload. For more details, please refer to [Design - Architecture](/docs/design/architecture).
 
 ## 3. `HybridCache` Usage
 
@@ -223,7 +193,7 @@ The hybrid cache also provides a `writer()` interface for advanced usage, such a
 
 [^risingwave]: https://github.com/risingwavelabs/risingwave
 
-[^with-device-options]: https://docs.rs/foyer/latest/foyer/struct.HybridCacheBuilderPhaseStorage.html#method.with_device_options
+[^with-device-config]: https://docs.rs/foyer/latest/foyer/struct.HybridCacheBuilderPhaseStorage.html#method.with_device_config
 
 [^direct-fs-device]: https://docs.rs/foyer/latest/foyer/struct.DirectFsDevice.html
 
@@ -233,16 +203,8 @@ The hybrid cache also provides a `writer()` interface for advanced usage, such a
 
 [^direct-fs-device-options-builder]: https://docs.rs/foyer/latest/foyer/struct.DirectFsDeviceOptionsBuilder.html
 
-[^direct-file-device-options]: https://docs.rs/foyer/latest/foyer/struct.DirectFileDeviceOptions.html
+[^direct-file-device-options-builder]: https://docs.rs/foyer/latest/foyer/struct.DirectFileDeviceOptionsBuilder.html
 
 [^admission-picker]: https://docs.rs/foyer/latest/foyer/trait.AdmissionPicker.html
 
 [^hybrid-cache-writer]: https://docs.rs/foyer/latest/foyer/struct.HybridCacheWriter.html
-
-[^with-large-object-disk-cache-options]: https://docs.rs/foyer/latest/foyer/struct.HybridCacheBuilderPhaseStorage.html#method.with_large_object_disk_cache_options
-
-[^with-small-object-disk-cache-options]: https://docs.rs/foyer/latest/foyer/struct.HybridCacheBuilderPhaseStorage.html#method.with_small_object_disk_cache_options
-
-[^large-engine-options]: https://docs.rs/foyer/latest/foyer/struct.LargeEngineOptions.html
-
-[^small-engine-options]: https://docs.rs/foyer/latest/foyer/struct.SmallEngineOptions.html
