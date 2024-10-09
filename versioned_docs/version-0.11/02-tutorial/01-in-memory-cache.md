@@ -15,13 +15,13 @@ The hybrid cache `HybridCache` also provides a in-memory only mode. If you want 
 Add this line to the `[dependencies]` section of your project's `Cargo.toml`.
 
 ```toml
-foyer = "0.12"
+foyer = "0.11"
 ```
 
 If you are using a nightly version of the rust toolchain, the `nightly` feature is needed.
 
 ```toml
-foyer = { version = "0.12", features = ["nightly"] }
+foyer = { version = "0.11", features = ["nightly"] }
 ```
 
 ## 2. Build a `Cache`
