@@ -42,7 +42,7 @@ const config: Config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/foyer-rs/website/tree/main/',
-          includeCurrentVersion: false,
+          includeCurrentVersion: true,
         },
         blog: {
           showReadingTime: true,
