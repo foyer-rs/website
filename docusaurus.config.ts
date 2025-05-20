@@ -83,9 +83,9 @@ const config: Config = {
       items: [
         {
           type: 'docSidebar',
-          sidebarId: 'learnSidebar',
+          sidebarId: 'guidesSidebar',
           position: 'left',
-          label: 'Learn',
+          label: 'Guides',
         },
         { to: '/blog', label: 'Blog', position: 'left' },
         { to: '/blog/remote/CHANGELOG', label: 'Changelog', position: 'left' },
@@ -172,7 +172,7 @@ const config: Config = {
       ],
       copyright: `Copyright © ${new Date().getFullYear()} foyer. Built with Docusaurus.`,
     },
-    tableOfContents: { minHeadingLevel: 3, maxHeadingLevel: 5 },
+    tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 5 },
     prism: {
       theme: prismThemes.dracula,
       darkTheme: prismThemes.dracula,

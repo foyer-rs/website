@@ -11,60 +11,136 @@ Let get through it!
 Add this line to the `[dependencies]` section of your project's `Cargo.toml`.
 
 ```toml
-foyer = "0.12"
+foyer = "0.17"
 ```
 
 If you are using a nightly version of the rust toolchain, the `nightly` feature is needed.
 
 ```toml
-foyer = { version = "0.12", features = ["nightly"] }
+foyer = { version = "0.17", features = ["nightly"] }
 ```
 
 ## 2. Build a `HybridCache`
 
-### 2.1 Build with a builder
+### 2.1 Create a builder.
 
-`HybridCache`[^hybrid-cache] can be built via `HybridCacheBuilder`[^hybrid-cache-builder].
+`HybridCache`[^hybrid-cache] can be built via `HybridCacheBuilder`[^hybrid-cache-builder]. You can create a new `HybridCacheBuilder` with `HybridCache::builder()` API.
 
 ```rust
-let mut builder = HybridCacheBuilder::new();
+use foyer::HybridCache;
+
+// ... ...
+
+let mut builder = HybridCache::<String, String>::builder();
 ```
 
-Building `HybridCache` requires a two-phase build. The first step is building the in-memory cache via `memory()`[^memory], and the second step is to build the disk cache via `storage()`[^storage].
+The `HybridCache` can be built in 3 phases:
 
-Before building the in-memory cache and the disk cache, you can configure some basic arguments of the hybrid cache. Such setting the name and the tracing config.
+1. Setup common configurations, such as the foyer instance name, metrics registry, etc.
+2. Setup in-memory cache configurations via `memory()`[^memory] API.
+3. Setup disk cache configurations via `storage()`[^storage] API.
+
+### 2.2 Setup common configurations
+
+The common configurations can be setup with `HybridCacheBuilder`.
+
+For example, to setup the foyer instance name as `"foyer"`:
 
 ```rust
-let mut builder = HybridCacheBuilder::new().with_name("foyer");
+let mut builder = HybridCache::<String, String>::builder().with_name("foyer");
 ```
 
 For more details, please refer to the API document.[^hybrid-cache-builder].
 
-:::tip dynamic tail-based tracing config
-
-The tracing config is used for configure the dynamic tail-based tracing. It can also be modified later. To learn more, see [Tutorial - Setup Monitor System](/docs/tutorial/monitor).
-
-:::
-
-### 2.2 Build in-memory cache
+### 2.3 Setup in-memory cache configurations
 
 Setting up the in-memory cache is the same with using `CacheBuilder`[^cache-builder] to setup `Cache`.[^cache] The only differences you don't to create a new `CacheBuilder`, just call `memory()` with the capacity on `HybridCacheBuilder`.
 
 ```rust
-let mut builder = HybridCacheBuilder::new().memory(1024);
+let mut builder = HybridCache::<String, String>::builder().memory(1024);
 ```
 
-The default configuration count the usage by entry count. If you needs to change it or change other configurations, please refer to [Tutorial - Setup In-memory Cache - 2. Build a `Cache`](/docs/tutorial/in-memory-cache#2-build-a-cache).
+The default configuration counts the cache usage by entry count. If you need to count it by actual memory usage or need to change other configurations, please refer to [Tutorial - Setup In-memory Cache - 2. Build a `Cache`](/docs/tutorial/in-memory-cache#2-build-a-cache).
 
-### 2.3 Build disk cache
+### 2.4 Setup disk cache configurations
 
 After setting up the in-memory cache, you can move on to setup the disk cache.
 
-#### 2.3.1 Choose a proper engine
+#### 2.4.1 Setup disk cache engine
+
+***foyer*** supports 2 types of disk cache engines:
+
+- **large object disk cache (RECOMMENDED)**: Suitable for most cache entries. Friendly to HDD/SSD while minimizing memory usage for indexing.
+- **small object disk cache**: Optimized for storing a large amount of small cach entries (~2 KiB) with almost no memory overhead because it does not use memory for indexing.
+
+***foyer*** supports 3 combinations of these 2 storage engines:
+
+- `Engine::Large` **(RECOMMENDED)**: Use **large object disk cache** only.
+- `Engine::Small`: Use **small object disk cache** only.
+- `Engine::Mixed`: Combination of **large object disk cache** and **small object disk cache**. A ratio can be set to decide how much space will be used for **large object disk cache** and **small object disk cache**. And a threshold can be set to decide which engine to use to store a cache entry by size. 
+
+
+
+<-------- configuration -------->
+
+
+
+
+
+
+
+
+#### 2.4.2 Setup device options
+
+By default, the hybrid cache builer is configured with a phantom device that always returns cache miss for 
+debugging or for in-memory cache mode compatiblility. To enable the real disk cache, please provide the device options by `with_device_options()`[^with-device-options].
+
+***foyer*** supports disk cache upon a file system directory, or directly on a raw block device:
+
+1. `DirectFsDevice`[^direct-fs-device]: Setup disk cache upon a file system directory. Performs direct I/O.[^direct-io] 
+2. `DirectFileDevice`[^direct-file-device]: Setup disk cache on a raw block device. Performs direct I/O.[^direct-io]
+
+Let's take `DirectFsDevice` as an example:
+
+```rust
+let hybrid: HybridCache<u64, String> = HybridCacheBuilder::new()
+    .with_name("foyer")
+    .memory(1024)
+    .storage(Engine::Large)
+    .with_device_options(DirectFsDeviceOptions::new("/data/foyer"))
+    .build()
+    .await
+    .unwrap();
+```
+
+This example uses directory `/data/foyer` to store disk cache data using a device options builder. With the default configuration, ***foyer*** will take 80% of the current free space as the disk cache capacity. You can also specify the disk cache capacity and per file size with the builder.
+
+For more details, please refer to the API document.[^direct-fs-device-options] [^direct-file-device-options]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#### 2.4.2 Choose a proper engine
 
 To setup the disk cache, you need to choose a proper engine for your workload first. Currently, ***foyer*** support 3 kinds of engines:
 
-- `Engine::Large`: For cache entries larger than 2 KiB. Friendly to HDD/SSD while minimizing memory usage for indexing.
+- `Engine::Large` **(RECOMMENDED)**: For cache entries larger than 2 KiB. Friendly to HDD/SSD while minimizing memory usage for indexing.
 - `Engine::Small`: For cache entries smaller than 2 KiB. A set-associated cache that does not use memory for indexing.
 - `Engine::Mixed(ratio)`: For cache entries in all sizes. Mixed `Engine::Large` and `Engine::Small`. Use `ratio` to control the proportion of the capacity of `Engine::Small`. Introducing a little overhead compared to using `Engine::Large` and `Engine::Small` separately.
 
@@ -78,11 +154,17 @@ If you have such needs, you can contact me via Github. We can work together to i
 
 :::
 
-#### 2.3.2 Setup shared options
+
+
+
+
+By default, the hybrid cache will **NOT** include a disk cache unless you specify a device. The hybrid cache will run on a in-memory cache compatible mode with the default configuration. All lookups to the disk will return a miss. It is useful if you want to support both in-memory cache or the hybrid cache based on your project's configuration or for debugging.
+
+#### 2.4.2 Setup shared options
 
 Some options are shared between engines, you can setup shared options before setting up engine-specific options.
 
-##### 2.3.2.1 Setup device options
+##### 2.4.2.1 Setup device options
 
 By default, the hybrid cache will **NOT** include a disk cache unless you specify a device. The hybrid cache will run on a in-memory cache compatible mode with the default configuration. All lookups to the disk will return a miss. It is useful if you want to support both in-memory cache or the hybrid cache based on your project's configuration or for debugging.
 
@@ -124,7 +206,7 @@ This example uses directory `/data/foyer` to store disk cache data using a devic
 
 For more details, please refer to the API document.[^direct-fs-device-options] [^direct-file-device-options]
 
-##### 2.3.2.2 Restrict the throughput
+##### 2.4.2.2 Restrict the throughput
 
 The bandwidth of the disk is much lower than the bandwidth of the memory. To avoid excessive use of the disk bandwidth, it is **HIGHLY RECOMMENDED** to setup the admission picker with a rate limiter.
 
@@ -149,7 +231,7 @@ For more details, please refer to [Design - Architecture](/docs/design/architect
 
 :::
 
-##### 2.3.2.3 Other shared options
+##### 2.4.2.3 Other shared options
 
 There are also other shared options for tuning or other purposes.
 
@@ -167,7 +249,7 @@ Tuning the optimized parameters requires an understanding of ***foyer*** interio
 
 :::
 
-#### 2.3.3 Setup engine-specific options
+#### 2.4.3 Setup engine-specific options
 
 Each engine also has its specific options for tuning or other purposes.
 

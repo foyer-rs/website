@@ -15,23 +15,25 @@ The hybrid cache `HybridCache` also provides a in-memory only mode. If you want 
 Add this line to the `[dependencies]` section of your project's `Cargo.toml`.
 
 ```toml
-foyer = "0.12"
+foyer = "0.17"
 ```
 
 If you are using a nightly version of the rust toolchain, the `nightly` feature is needed.
 
 ```toml
-foyer = { version = "0.12", features = ["nightly"] }
+foyer = { version = "0.17", features = ["nightly"] }
 ```
 
 ## 2. Build a `Cache`
 
-### 2.1 Build with a builder
+### 2.1 Build a basic in-memory cache.
 
-`Cache`[^cache] can be built via `CacheBuilder`[^cache-builder]. For the default configuration, only `capacity` is required.
+`Cache`[^cache] can be built via `CacheBuilder`[^cache-builder]. You can create a new `CacheBuilder` with `Cache::builder()` API.
+
+The `capacity` is required when creating a builder.
 
 ```rust
-use foyer::{Cache, CacheBuilder};
+use foyer::Cache;
 
 // ... ...
 
@@ -45,8 +47,8 @@ By default, `Cache` counts its usage for eviction by entry count. In the case be
 Counting by entry count may be not suitable for all cases. So, ***foyer*** also provides an interface to let the user decide how to count the usage.
 
 ```rust
-let cache: Cache<String, String> = CacheBuilder::new(10000)
-  .with_weighter(|key, value| key.len() + value.len())
+let cache: Cache<String, String> = Cache::builder(10000)
+  .with_weighter(|key: &String, value: &String| key.len() + value.len())
   .build();
 ```
 
@@ -84,7 +86,7 @@ let cache: Cache<String, String> = CacheBuilder::new(1024)
 
 Please refer to the API document.[^cache-builder]
 
-## 3. Use `Cache` as any other cache library
+## 3. Use a `Cache`
 
 `Cache` provides similar interfaces to caches from any other cache library.
 
